@@ -10,10 +10,10 @@
 <body>
     <h1>Word Brain</h1>
     <div id="container">
-        <div id="itemA">Data: <input type="text" v-model.lazy="cells" v-on:change="updateCells"></div>
-        <div id="itemB">Word Length: <input type="number" v-model="wordsLength"><input type="button" value="Find" v-on:click="findWords"></div>
-        <div id="itemC">
-            <table id="wordTable">
+        <div>Data: <input type="text" v-model.lazy="cells" v-on:change="updateCells"></div>
+        <div>Word Length: <input type="number" v-model="wordsLength"><input type="button" value="Find" v-on:click="findWords"></div>
+        <div id="wordTable">
+            <table>
                 <tbody>
                     <tr><td>{{c00}}</td><td>{{c10}}</td><td>{{c20}}</td><td>{{c30}}</td></tr>
                     <tr><td>{{c01}}</td><td>{{c11}}</td><td>{{c21}}</td><td>{{c31}}</td></tr>
@@ -22,10 +22,8 @@
                 </tbody>
             </table>
         </div>
-        <div id="itemD">
-            <select name="sometext" multiple="multiple">
-                <option v-for="word in words">{{ word }}</option>
-            </select>
+        <div>
+            <textarea id="words">{{ words.join("\n") }}</textarea>
         </div>
     </div>
 </body>
