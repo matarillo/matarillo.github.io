@@ -1,0 +1,28 @@
+#container {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+}
+#container>div {
+    border: 1px solid gray;
+    padding: 5px;
+}
+#itemC {
+  	display: flex;
+    justify-content: center;
+}
+#itemC table {
+    border-collapse: collapse;
+}
+#itemC table, #itemC th, #itemC td {
+    border: 1px solid black;
+}
+#itemC td {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+#itemD select {
+    width: 100%;
+    height: 100%;
+}

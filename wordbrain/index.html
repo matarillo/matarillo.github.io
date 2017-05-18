@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Brain</title>
+    <link href="style/index.css" rel="stylesheet" type="text/css" />
+    <script src="dist/bundle.js"></script>
+</head>
+<body>
+    <h1>Word Brain</h1>
+    <div id="container">
+        <div id="itemA">Data: <input type="text" v-model.lazy="cells" v-on:change="updateCells"></div>
+        <div id="itemB">Word Length: <input type="number" v-model="wordsLength"><input type="button" value="Find" v-on:click="findWords"></div>
+        <div id="itemC">
+            <table id="wordTable">
+                <tbody>
+                    <tr><td>{{c00}}</td><td>{{c10}}</td><td>{{c20}}</td><td>{{c30}}</td></tr>
+                    <tr><td>{{c01}}</td><td>{{c11}}</td><td>{{c21}}</td><td>{{c31}}</td></tr>
+                    <tr><td>{{c02}}</td><td>{{c12}}</td><td>{{c22}}</td><td>{{c32}}</td></tr>
+                    <tr><td>{{c03}}</td><td>{{c13}}</td><td>{{c23}}</td><td>{{c33}}</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="itemD">
+            <select name="sometext" multiple="multiple">
+                <option v-for="word in words">{{ word }}</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>
