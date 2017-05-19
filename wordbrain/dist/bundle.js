@@ -9817,93 +9817,87 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__word__ = __webpack_require__(0);
 
 
-var SIZE = 4;
 var App = (function () {
     function App() {
-        var _this = this;
         this._wordList = __WEBPACK_IMPORTED_MODULE_1__word__["a" /* allWordList */];
-        this.vueModel = {
-            el: "#container",
-            data: {
-                cells: "",
-                c00: "",
-                c10: "",
-                c20: "",
-                c30: "",
-                c01: "",
-                c11: "",
-                c21: "",
-                c31: "",
-                c02: "",
-                c12: "",
-                c22: "",
-                c32: "",
-                c03: "",
-                c13: "",
-                c23: "",
-                c33: "",
-                wordsLength: "0",
-                words: []
-            },
-            methods: {
-                updateCells: function () {
-                    _this.updateCells(_this.vueModel.data.cells);
-                    _this.updateVueModelCells();
-                },
-                findWords: function () {
-                    _this.findWords(_this.vueModel.data.wordsLength);
+        this._cellSize = 4;
+        this._cellData = "ABCD,EFGH,IJKL,MNOP";
+        this._wordsLength = 0;
+    }
+    App.prototype.getData = function () {
+        return {
+            cellSize: this._cellSize.toString(),
+            cellData: this._cellData,
+            cells: this.getCells(),
+            wordsLength: this._wordsLength.toString(),
+            words: [],
+        };
+    };
+    App.prototype.updateSize = function (data) {
+        var size = parseInt(data.cellSize);
+        if (isNaN(size) || size <= 0) {
+            data.cellSize = this._cellSize.toString();
+            return;
+        }
+        this.setCellSize(size);
+        data.cellData = this._cellData;
+        data.cells = this.getCells();
+    };
+    App.prototype.updateCells = function (data) {
+        var _this = this;
+        var arr = data.cellData.split(",");
+        if (arr.length !== this._cellSize || arr.some(function (x) { return x.length !== _this._cellSize; })) {
+            data.cellData = this._cellData;
+            return;
+        }
+        this._cellData = data.cellData;
+        data.cells = this.getCells();
+    };
+    App.prototype.updateWords = function (data) {
+        data.words = this.findWords(data.wordsLength);
+    };
+    App.prototype.setCellSize = function (size) {
+        this._cellSize = size;
+        var l = size * size;
+        var arr = new Array(size);
+        var counter = 0;
+        for (var y = 0; y < size; y++) {
+            arr[y] = "";
+            for (var x = 0; x < size; x++) {
+                arr[y] += String.fromCharCode(65 + counter);
+                counter++;
+                if (counter === 26) {
+                    counter = 0;
                 }
             }
-        };
-        this._cells = "ABCD,EFGH,IJKL,MNOP";
-        this._wordsLength = 0;
-        this.updateVueModelCells();
-    }
-    App.prototype.updateCells = function (value) {
-        var arr = value.split(",");
-        if (arr.length == SIZE && arr.every(function (x) { return x.length === SIZE; })) {
-            this._cells = value;
         }
+        this._cellData = arr.join(",");
     };
-    App.prototype.updateVueModelCells = function () {
-        var arr = this._cells.split(",");
-        this.vueModel.data.cells = this._cells;
-        this.vueModel.data.c00 = arr[0].charAt(0);
-        this.vueModel.data.c10 = arr[0].charAt(1);
-        this.vueModel.data.c20 = arr[0].charAt(2);
-        this.vueModel.data.c30 = arr[0].charAt(3);
-        this.vueModel.data.c01 = arr[1].charAt(0);
-        this.vueModel.data.c11 = arr[1].charAt(1);
-        this.vueModel.data.c21 = arr[1].charAt(2);
-        this.vueModel.data.c31 = arr[1].charAt(3);
-        this.vueModel.data.c02 = arr[2].charAt(0);
-        this.vueModel.data.c12 = arr[2].charAt(1);
-        this.vueModel.data.c22 = arr[2].charAt(2);
-        this.vueModel.data.c32 = arr[2].charAt(3);
-        this.vueModel.data.c03 = arr[3].charAt(0);
-        this.vueModel.data.c13 = arr[3].charAt(1);
-        this.vueModel.data.c23 = arr[3].charAt(2);
-        this.vueModel.data.c33 = arr[3].charAt(3);
+    App.prototype.getCells = function () {
+        return this._cellData.split(",").map(function (x) { return x.split(""); });
     };
     App.prototype.findWords = function (length) {
         var num = parseInt(length);
         if (isNaN(num)) {
-            return;
+            return [];
         }
         this._wordsLength = num;
         if (num <= 0) {
-            return;
+            return [];
         }
-        var cells = this._cells.split(",");
-        var m = [[false, false, false, false], [false, false, false, false], [false, false, false, false], [false, false, false, false]];
-        var words = new Array(16);
-        for (var y = 0; y < 4; y++) {
-            for (var x = 0; x < 4; x++) {
-                var i = y * 4 + x;
+        var cells = this._cellData.split(",");
+        var m = new Array(this._cellSize);
+        for (var i = 0; i < m.length; i++) {
+            m[i] = new Array(this._cellSize).fill(false);
+        }
+        var words = new Array(this._cellSize * this._cellSize);
+        for (var y = 0; y < this._cellSize; y++) {
+            for (var x = 0; x < this._cellSize; x++) {
+                var i = y * this._cellSize + x;
                 words[i] = this.searchRecc(cells, m, [], num, x, y);
             }
         }
-        this.vueModel.data.words = words.reduce(function (prev, curr) { return prev.concat(curr); });
+        return words.reduce(function (prev, curr) { return prev.concat(curr); });
     };
     App.prototype.someStartWith = function (prefix) {
         var lowerPrefix = prefix.toLowerCase();
@@ -9951,12 +9945,22 @@ var App = (function () {
         return r;
     };
     App.prototype.inside = function (x, y) {
-        return (0 <= x && x < SIZE && 0 <= y && y < SIZE);
+        return (0 <= x && x < this._cellSize && 0 <= y && y < this._cellSize);
     };
     return App;
 }());
 document.addEventListener("DOMContentLoaded", function () {
-    new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(new App().vueModel);
+    var app = new App();
+    var options = {
+        el: "#container",
+        data: app.getData(),
+        methods: {
+            updateSize: function () { return app.updateSize(options.data); },
+            updateCells: function () { return app.updateCells(options.data); },
+            findWords: function () { return app.updateWords(options.data); },
+        },
+    };
+    new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(options);
 });
 
 

@@ -10,15 +10,21 @@
 <body>
     <h1>Word Brain</h1>
     <div id="container">
-        <div>Data: <input type="text" v-model.lazy="cells" v-on:change="updateCells"></div>
+        <div>Size: 
+            <select v-model="cellSize" v-on:change="updateSize">
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+            </select>
+        </div>
+        <div>Data: <input id="data" type="text" v-model.lazy="cellData" v-on:change="updateCells"></div>
         <div>Word Length: <input type="number" v-model="wordsLength"><input type="button" value="Find" v-on:click="findWords"></div>
         <div id="wordTable">
             <table>
                 <tbody>
-                    <tr><td>{{c00}}</td><td>{{c10}}</td><td>{{c20}}</td><td>{{c30}}</td></tr>
-                    <tr><td>{{c01}}</td><td>{{c11}}</td><td>{{c21}}</td><td>{{c31}}</td></tr>
-                    <tr><td>{{c02}}</td><td>{{c12}}</td><td>{{c22}}</td><td>{{c32}}</td></tr>
-                    <tr><td>{{c03}}</td><td>{{c13}}</td><td>{{c23}}</td><td>{{c33}}</td></tr>
+                    <tr v-for="row in cells"><td v-for="cell in row">{{cell}}</td></tr>
                 </tbody>
             </table>
         </div>
