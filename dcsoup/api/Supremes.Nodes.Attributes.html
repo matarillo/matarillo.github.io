@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Attributes
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Attributes
+   ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Supremes.Nodes.Attributes">
+  
+  
+  <h1 id="Supremes_Nodes_Attributes" data-uid="Supremes.Nodes.Attributes" class="text-break">Class Attributes
+  </h1>
+  <div class="markdown level0 summary"><p>The attributes of an Element.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Attributes</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Supremes.Nodes.html">Supremes.Nodes</a></h6>
+  <h6><strong>Assembly</strong>: Supremes.dll</h6>
+  <h5 id="Supremes_Nodes_Attributes_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Attributes : IEnumerable&lt;Attribute&gt;</code></pre>
+  </div>
+  <h5 id="Supremes_Nodes_Attributes_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Attributes are treated as a map: there can be only one value associated with an attribute key.</p>
+<p>
+Attribute key and value comparisons are done case insensitively, and keys are normalised to
+lower-case.
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Supremes_Nodes_Attributes_Count_" data-uid="Supremes.Nodes.Attributes.Count*"></a>
+  <h4 id="Supremes_Nodes_Attributes_Count" data-uid="Supremes.Nodes.Attributes.Count">Count</h4>
+  <div class="markdown level1 summary"><p>Get the number of attributes in this set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>size</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Attributes_Dataset_" data-uid="Supremes.Nodes.Attributes.Dataset*"></a>
+  <h4 id="Supremes_Nodes_Attributes_Dataset" data-uid="Supremes.Nodes.Attributes.Dataset">Dataset</h4>
+  <div class="markdown level1 summary"><p>Retrieves a filtered view of attributes that are HTML5 custom data attributes; that is, attributes with keys
+starting with
+<code>data-</code>
+.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, string&gt; Dataset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><p>map of custom data attributes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Attributes_Html_" data-uid="Supremes.Nodes.Attributes.Html*"></a>
+  <h4 id="Supremes_Nodes_Attributes_Html" data-uid="Supremes.Nodes.Attributes.Html">Html</h4>
+  <div class="markdown level1 summary"><p>Get the HTML representation of these attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Html { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>HTML</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Attributes_Item_" data-uid="Supremes.Nodes.Attributes.Item*"></a>
+  <h4 id="Supremes_Nodes_Attributes_Item_System_String_" data-uid="Supremes.Nodes.Attributes.Item(System.String)">Item[String]</h4>
+  <div class="markdown level1 summary"><p>Get an attribute value by key.
+Set a new attribute, or replace an existing one by key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string this[string key] { get; set; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>the attribute key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>attribute value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Attributes_Item_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Nodes.Attributes.html#Supremes_Nodes_Attributes_ContainsKey_System_String_">ContainsKey(String)</a></div>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Supremes_Nodes_Attributes_AsList_" data-uid="Supremes.Nodes.Attributes.AsList*"></a>
+  <h4 id="Supremes_Nodes_Attributes_AsList" data-uid="Supremes.Nodes.Attributes.AsList">AsList()</h4>
+  <div class="markdown level1 summary"><p>Get the attributes as a List, for iteration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Attribute&gt; AsList()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Supremes.Nodes.Attribute.html">Attribute</a>&gt;</td>
+        <td><p>an view of the attributes as a List.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Attributes_AsList_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Get the attributes as a List, for iteration. Do not modify the keys of the attributes via this view, as changes
+to keys will not be recognised in the containing set.</p>
+</div>
+  
+  
+  <a id="Supremes_Nodes_Attributes_ContainsKey_" data-uid="Supremes.Nodes.Attributes.ContainsKey*"></a>
+  <h4 id="Supremes_Nodes_Attributes_ContainsKey_System_String_" data-uid="Supremes.Nodes.Attributes.ContainsKey(System.String)">ContainsKey(String)</h4>
+  <div class="markdown level1 summary"><p>Tests if these attributes contain an attribute with this key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ContainsKey(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>key to check for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if key exists, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Attributes_Equals_" data-uid="Supremes.Nodes.Attributes.Equals*"></a>
+  <h4 id="Supremes_Nodes_Attributes_Equals_System_Object_" data-uid="Supremes.Nodes.Attributes.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="Supremes.Nodes.Attributes.html">Attributes</a> instances for equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Attributes_GetEnumerator_" data-uid="Supremes.Nodes.Attributes.GetEnumerator*"></a>
+  <h4 id="Supremes_Nodes_Attributes_GetEnumerator" data-uid="Supremes.Nodes.Attributes.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the <a class="xref" href="Supremes.Nodes.Attributes.html">Attributes</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;Attribute&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerator</span>&lt;<a class="xref" href="Supremes.Nodes.Attribute.html">Attribute</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Attributes_GetHashCode_" data-uid="Supremes.Nodes.Attributes.GetHashCode*"></a>
+  <h4 id="Supremes_Nodes_Attributes_GetHashCode" data-uid="Supremes.Nodes.Attributes.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Attributes_Put_" data-uid="Supremes.Nodes.Attributes.Put*"></a>
+  <h4 id="Supremes_Nodes_Attributes_Put_Supremes_Nodes_Attribute_" data-uid="Supremes.Nodes.Attributes.Put(Supremes.Nodes.Attribute)">Put(Attribute)</h4>
+  <div class="markdown level1 summary"><p>Set a new attribute, or replace an existing one by key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Put(Attribute attribute)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Attribute.html">Attribute</a></td>
+        <td><span class="parametername">attribute</span></td>
+        <td><p>attribute</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Attributes_Remove_" data-uid="Supremes.Nodes.Attributes.Remove*"></a>
+  <h4 id="Supremes_Nodes_Attributes_Remove_System_String_" data-uid="Supremes.Nodes.Attributes.Remove(System.String)">Remove(String)</h4>
+  <div class="markdown level1 summary"><p>Remove an attribute by key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>attribute key to remove</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Attributes_SetAll_" data-uid="Supremes.Nodes.Attributes.SetAll*"></a>
+  <h4 id="Supremes_Nodes_Attributes_SetAll_Supremes_Nodes_Attributes_" data-uid="Supremes.Nodes.Attributes.SetAll(Supremes.Nodes.Attributes)">SetAll(Attributes)</h4>
+  <div class="markdown level1 summary"><p>Add all the attributes from the incoming set to this set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAll(Attributes incoming)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Attributes.html">Attributes</a></td>
+        <td><span class="parametername">incoming</span></td>
+        <td><p>attributes to add to these attributes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Attributes_ToString_" data-uid="Supremes.Nodes.Attributes.ToString*"></a>
+  <h4 id="Supremes_Nodes_Attributes_ToString" data-uid="Supremes.Nodes.Attributes.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Converts the value of this instance to a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

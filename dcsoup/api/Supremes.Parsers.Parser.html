@@ -1,0 +1,610 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Parser
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Parser
+   ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Supremes.Parsers.Parser">
+  
+  
+  <h1 id="Supremes_Parsers_Parser" data-uid="Supremes.Parsers.Parser" class="text-break">Class Parser
+  </h1>
+  <div class="markdown level0 summary"><p>Parses HTML into a
+<a class="xref" href="Supremes.Nodes.Document.html">Document</a>
+. Generally best to use one of the  more convenient parse methods
+in
+<a class="xref" href="Supremes.Dcsoup.html">Dcsoup</a>
+.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Parser</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Supremes.Parsers.html">Supremes.Parsers</a></h6>
+  <h6><strong>Assembly</strong>: Supremes.dll</h6>
+  <h5 id="Supremes_Parsers_Parser_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Parser : object</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Supremes_Parsers_Parser_CanTrackErrors_" data-uid="Supremes.Parsers.Parser.CanTrackErrors*"></a>
+  <h4 id="Supremes_Parsers_Parser_CanTrackErrors" data-uid="Supremes.Parsers.Parser.CanTrackErrors">CanTrackErrors</h4>
+  <div class="markdown level1 summary"><p>Check if parse error tracking is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanTrackErrors { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>current track error state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Parsers_Parser_Errors_" data-uid="Supremes.Parsers.Parser.Errors*"></a>
+  <h4 id="Supremes_Parsers_Parser_Errors" data-uid="Supremes.Parsers.Parser.Errors">Errors</h4>
+  <div class="markdown level1 summary"><p>Retrieve the parse errors, if any, from the last parse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ParseError&gt; Errors { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<a class="xref" href="Supremes.Parsers.ParseError.html">ParseError</a>&gt;</td>
+        <td><p>list of parse errors, up to the size of the maximum errors tracked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Parsers_Parser_HtmlParser_" data-uid="Supremes.Parsers.Parser.HtmlParser*"></a>
+  <h4 id="Supremes_Parsers_Parser_HtmlParser" data-uid="Supremes.Parsers.Parser.HtmlParser">HtmlParser</h4>
+  <div class="markdown level1 summary"><p>Create a new HTML parser.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Parser HtmlParser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Parsers.Parser.html">Parser</a></td>
+        <td><p>a new HTML parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Parsers_Parser_HtmlParser_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This parser treats input as HTML5, and enforces the creation of a normalised document,
+based on a knowledge of the semantics of the incoming tags.</p>
+</div>
+  
+  
+  <a id="Supremes_Parsers_Parser_XmlParser_" data-uid="Supremes.Parsers.Parser.XmlParser*"></a>
+  <h4 id="Supremes_Parsers_Parser_XmlParser" data-uid="Supremes.Parsers.Parser.XmlParser">XmlParser</h4>
+  <div class="markdown level1 summary"><p>Create a new XML parser.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Parser XmlParser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Parsers.Parser.html">Parser</a></td>
+        <td><p>a new simple XML parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Parsers_Parser_XmlParser_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This parser assumes no knowledge of the incoming tags and does not treat it as HTML,
+rather creates a simple tree directly from the input.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Supremes_Parsers_Parser_Parse_" data-uid="Supremes.Parsers.Parser.Parse*"></a>
+  <h4 id="Supremes_Parsers_Parser_Parse_System_String_System_String_" data-uid="Supremes.Parsers.Parser.Parse(System.String,System.String)">Parse(String, String)</h4>
+  <div class="markdown level1 summary"><p>Parse HTML into a Document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document Parse(string html, string baseUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">html</span></td>
+        <td><p>HTML to parse</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>base URI of document (i.e. original fetch location), for resolving relative URLs.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>parsed Document</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Parsers_Parser_ParseBodyFragment_" data-uid="Supremes.Parsers.Parser.ParseBodyFragment*"></a>
+  <h4 id="Supremes_Parsers_Parser_ParseBodyFragment_System_String_System_String_" data-uid="Supremes.Parsers.Parser.ParseBodyFragment(System.String,System.String)">ParseBodyFragment(String, String)</h4>
+  <div class="markdown level1 summary"><p>Parse a fragment of HTML into the
+<code>body</code>
+of a Document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document ParseBodyFragment(string bodyHtml, string baseUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bodyHtml</span></td>
+        <td><p>fragment of HTML</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>base URI of document (i.e. original fetch location), for resolving relative URLs.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>Document, with empty head, and HTML parsed into body</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Parsers_Parser_ParseFragment_" data-uid="Supremes.Parsers.Parser.ParseFragment*"></a>
+  <h4 id="Supremes_Parsers_Parser_ParseFragment_System_String_Supremes_Nodes_Element_System_String_" data-uid="Supremes.Parsers.Parser.ParseFragment(System.String,Supremes.Nodes.Element,System.String)">ParseFragment(String, Element, String)</h4>
+  <div class="markdown level1 summary"><p>Parse a fragment of HTML into a list of nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;Node&gt; ParseFragment(string fragmentHtml, Element context, string baseUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fragmentHtml</span></td>
+        <td><p>the fragment of HTML to parse</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Element.html">Element</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>(optional) the element that this HTML fragment is being parsed for (i.e. for inner HTML). This
+provides stack context (for implicit element creation).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>base URI of document (i.e. original fetch location), for resolving relative URLs.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Supremes.Nodes.Node.html">Node</a>&gt;</td>
+        <td><p>list of nodes parsed from the input HTML. Note that the context element, if supplied, is not modified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Parsers_Parser_ParseFragment_System_String_Supremes_Nodes_Element_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The context element, if supplied, supplies parsing context.</p>
+</div>
+  
+  
+  <a id="Supremes_Parsers_Parser_ParseInput_" data-uid="Supremes.Parsers.Parser.ParseInput*"></a>
+  <h4 id="Supremes_Parsers_Parser_ParseInput_System_String_System_String_" data-uid="Supremes.Parsers.Parser.ParseInput(System.String,System.String)">ParseInput(String, String)</h4>
+  <div class="markdown level1 summary"><p>Parse HTML into a Document</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Document ParseInput(string html, string baseUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">html</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Parsers_Parser_ParseXmlFragment_" data-uid="Supremes.Parsers.Parser.ParseXmlFragment*"></a>
+  <h4 id="Supremes_Parsers_Parser_ParseXmlFragment_System_String_System_String_" data-uid="Supremes.Parsers.Parser.ParseXmlFragment(System.String,System.String)">ParseXmlFragment(String, String)</h4>
+  <div class="markdown level1 summary"><p>Parse a fragment of XML into a list of nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;Node&gt; ParseXmlFragment(string fragmentXml, string baseUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fragmentXml</span></td>
+        <td><p>the fragment of XML to parse</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>base URI of document (i.e. original fetch location), for resolving relative URLs.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Supremes.Nodes.Node.html">Node</a>&gt;</td>
+        <td><p>list of nodes parsed from the input XML.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Parsers_Parser_SetTrackErrors_" data-uid="Supremes.Parsers.Parser.SetTrackErrors*"></a>
+  <h4 id="Supremes_Parsers_Parser_SetTrackErrors_System_Int32_" data-uid="Supremes.Parsers.Parser.SetTrackErrors(System.Int32)">SetTrackErrors(Int32)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable parse error tracking for the next parse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Parser SetTrackErrors(int maxErrors)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxErrors</span></td>
+        <td><p>the maximum number of errors to track. Set to 0 to disable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Parsers.Parser.html">Parser</a></td>
+        <td><p>this, for chaining</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Parsers_Parser_UnescapeEntities_" data-uid="Supremes.Parsers.Parser.UnescapeEntities*"></a>
+  <h4 id="Supremes_Parsers_Parser_UnescapeEntities_System_String_System_Boolean_" data-uid="Supremes.Parsers.Parser.UnescapeEntities(System.String,System.Boolean)">UnescapeEntities(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Utility method to unescape HTML entities from a string</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string UnescapeEntities(string string, bool inAttribute)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">string</span></td>
+        <td><p>HTML escaped string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">inAttribute</span></td>
+        <td><p>if the string is to be escaped in strict mode (as attributes are)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>an unescaped string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

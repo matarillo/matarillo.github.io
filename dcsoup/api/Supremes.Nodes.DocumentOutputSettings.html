@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DocumentOutputSettings
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DocumentOutputSettings
+   ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Supremes.Nodes.DocumentOutputSettings">
+  
+  
+  <h1 id="Supremes_Nodes_DocumentOutputSettings" data-uid="Supremes.Nodes.DocumentOutputSettings" class="text-break">Class DocumentOutputSettings
+  </h1>
+  <div class="markdown level0 summary"><p>A Document's output settings control the form of the text() and html() methods.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DocumentOutputSettings</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Supremes.Nodes.html">Supremes.Nodes</a></h6>
+  <h6><strong>Assembly</strong>: Supremes.dll</h6>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DocumentOutputSettings : object</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Supremes_Nodes_DocumentOutputSettings_Charset_" data-uid="Supremes.Nodes.DocumentOutputSettings.Charset*"></a>
+  <h4 id="Supremes_Nodes_DocumentOutputSettings_Charset" data-uid="Supremes.Nodes.DocumentOutputSettings.Charset">Charset</h4>
+  <div class="markdown level1 summary"><p>Get or Set the document's current output charset,
+which is used to control which characters are escaped
+when generating HTML (via the <code>Html</code> properties),
+and which are kept intact.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Encoding Charset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Encoding</span></td>
+        <td><p>the new charset to use</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_Charset_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Where possible (when parsing from a URL or File),
+the document&apos;s output charset is automatically set to the input charset.
+Otherwise, it defaults to utf-8.
+</p>
+<p>
+if you want to use fluent API, write <code>using Supremes.Fluent;</code>.
+</p>
+</div>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_Charset_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Fluent.FluentUtility.html">FluentUtility</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_DocumentOutputSettings_EscapeMode_" data-uid="Supremes.Nodes.DocumentOutputSettings.EscapeMode*"></a>
+  <h4 id="Supremes_Nodes_DocumentOutputSettings_EscapeMode" data-uid="Supremes.Nodes.DocumentOutputSettings.EscapeMode">EscapeMode</h4>
+  <div class="markdown level1 summary"><p>Get or Set the document's current HTML escape mode,
+which determines how characters are escaped
+when the output character set does not support a given character.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DocumentEscapeMode EscapeMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.DocumentEscapeMode.html">DocumentEscapeMode</a></td>
+        <td><p>the new escape mode to use</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_EscapeMode_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+<code>Base</code>, which provides a limited set of named HTML entities
+and escapes other characters as numbered entities for maximum compatibility;
+or <code>Extended</code>, which uses the complete set of HTML named entities.
+</p>
+<p>
+The default escape mode is <code>Base</code>.
+</p>
+<p>
+if you want to use fluent API, write <code>using Supremes.Fluent;</code>.
+</p>
+</div>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_EscapeMode_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Fluent.FluentUtility.html">FluentUtility</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_DocumentOutputSettings_IndentAmount_" data-uid="Supremes.Nodes.DocumentOutputSettings.IndentAmount*"></a>
+  <h4 id="Supremes_Nodes_DocumentOutputSettings_IndentAmount" data-uid="Supremes.Nodes.DocumentOutputSettings.IndentAmount">IndentAmount</h4>
+  <div class="markdown level1 summary"><p>Get or Set the current tag indent amount, used when pretty printing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndentAmount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>number of spaces to use for indenting each level. Must be &gt;= 0</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_IndentAmount_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Fluent.FluentUtility.html">FluentUtility</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_DocumentOutputSettings_Outline_" data-uid="Supremes.Nodes.DocumentOutputSettings.Outline*"></a>
+  <h4 id="Supremes_Nodes_DocumentOutputSettings_Outline" data-uid="Supremes.Nodes.DocumentOutputSettings.Outline">Outline</h4>
+  <div class="markdown level1 summary"><p>Get or Set if outline mode is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Outline { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>new outline setting</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_Outline_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Default is false.
+If enabled, the HTML output methods will consider all tags as block.
+</p>
+<p>
+if you want to use fluent API, write <code>using Supremes.Fluent;</code>.
+</p>
+</div>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_Outline_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Fluent.FluentUtility.html">FluentUtility</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_DocumentOutputSettings_PrettyPrint_" data-uid="Supremes.Nodes.DocumentOutputSettings.PrettyPrint*"></a>
+  <h4 id="Supremes_Nodes_DocumentOutputSettings_PrettyPrint" data-uid="Supremes.Nodes.DocumentOutputSettings.PrettyPrint">PrettyPrint</h4>
+  <div class="markdown level1 summary"><p>Get or Set if pretty printing is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PrettyPrint { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>new pretty print setting</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_PrettyPrint_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Default is true. If disabled, the HTML output methods will not re-format
+the output, and the output will generally look like the input.
+</p>
+<p>
+if you want to use fluent API, write <code>using Supremes.Fluent;</code>.
+</p>
+</div>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_PrettyPrint_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Fluent.FluentUtility.html">FluentUtility</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_DocumentOutputSettings_Syntax_" data-uid="Supremes.Nodes.DocumentOutputSettings.Syntax*"></a>
+  <h4 id="Supremes_Nodes_DocumentOutputSettings_Syntax" data-uid="Supremes.Nodes.DocumentOutputSettings.Syntax">Syntax</h4>
+  <div class="markdown level1 summary"><p>Get or Set the document's current output syntax.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DocumentSyntax Syntax { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.DocumentSyntax.html">DocumentSyntax</a></td>
+        <td><p>serialization syntax</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_Syntax_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Either <code>Html</code>, with empty tags and boolean attributes (etc),
+or <code>Xml</code>, with self-closing tags.
+</p>
+<p>
+if you want to use fluent API, write <code>using Supremes.Fluent;</code>.
+</p>
+</div>
+  <h5 id="Supremes_Nodes_DocumentOutputSettings_Syntax_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Fluent.FluentUtility.html">FluentUtility</a></div>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Supremes.Fluent.FluentUtility.html#Supremes_Fluent_FluentUtility_EscapeMode_Supremes_Nodes_DocumentOutputSettings_Supremes_Nodes_DocumentEscapeMode_">FluentUtility.EscapeMode(DocumentOutputSettings, DocumentEscapeMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="Supremes.Fluent.FluentUtility.html#Supremes_Fluent_FluentUtility_Charset_Supremes_Nodes_DocumentOutputSettings_Encoding_">FluentUtility.Charset(DocumentOutputSettings, Encoding)</a>
+  </div>
+  <div>
+      <a class="xref" href="Supremes.Fluent.FluentUtility.html#Supremes_Fluent_FluentUtility_Charset_Supremes_Nodes_DocumentOutputSettings_String_">FluentUtility.Charset(DocumentOutputSettings, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Supremes.Fluent.FluentUtility.html#Supremes_Fluent_FluentUtility_Syntax_Supremes_Nodes_DocumentOutputSettings_Supremes_Nodes_DocumentSyntax_">FluentUtility.Syntax(DocumentOutputSettings, DocumentSyntax)</a>
+  </div>
+  <div>
+      <a class="xref" href="Supremes.Fluent.FluentUtility.html#Supremes_Fluent_FluentUtility_PrettyPrint_Supremes_Nodes_DocumentOutputSettings_System_Boolean_">FluentUtility.PrettyPrint(DocumentOutputSettings, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Supremes.Fluent.FluentUtility.html#Supremes_Fluent_FluentUtility_Outline_Supremes_Nodes_DocumentOutputSettings_System_Boolean_">FluentUtility.Outline(DocumentOutputSettings, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="Supremes.Fluent.FluentUtility.html#Supremes_Fluent_FluentUtility_IndentAmount_Supremes_Nodes_DocumentOutputSettings_System_Int32_">FluentUtility.IndentAmount(DocumentOutputSettings, Int32)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

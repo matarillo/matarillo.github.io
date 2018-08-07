@@ -1,0 +1,1034 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Dcsoup
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Dcsoup
+   ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Supremes.Dcsoup">
+  
+  
+  <h1 id="Supremes_Dcsoup" data-uid="Supremes.Dcsoup" class="text-break">Class Dcsoup
+  </h1>
+  <div class="markdown level0 summary"><p>The core public access point to the Dcsoup functionality.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Dcsoup</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Supremes.html">Supremes</a></h6>
+  <h6><strong>Assembly</strong>: Supremes.dll</h6>
+  <h5 id="Supremes_Dcsoup_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Dcsoup : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Supremes_Dcsoup_Clean_" data-uid="Supremes.Dcsoup.Clean*"></a>
+  <h4 id="Supremes_Dcsoup_Clean_System_String_Supremes_Safety_Whitelist_" data-uid="Supremes.Dcsoup.Clean(System.String,Supremes.Safety.Whitelist)">Clean(String, Whitelist)</h4>
+  <div class="markdown level1 summary"><p>Get safe HTML from untrusted input HTML, by parsing input HTML and filtering it through a white-list of permitted
+tags and attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Clean(string bodyHtml, Whitelist whitelist)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bodyHtml</span></td>
+        <td><p>input untrusted HTML (body fragment)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><span class="parametername">whitelist</span></td>
+        <td><p>white-list of permitted HTML elements</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>safe HTML (body fragment)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_Clean_System_String_Supremes_Safety_Whitelist__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Safety.Cleaner.html#Supremes_Safety_Cleaner_Clean_Supremes_Nodes_Document_">Clean(Document)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Dcsoup_Clean_" data-uid="Supremes.Dcsoup.Clean*"></a>
+  <h4 id="Supremes_Dcsoup_Clean_System_String_System_String_Supremes_Safety_Whitelist_" data-uid="Supremes.Dcsoup.Clean(System.String,System.String,Supremes.Safety.Whitelist)">Clean(String, String, Whitelist)</h4>
+  <div class="markdown level1 summary"><p>Get safe HTML from untrusted input HTML,
+by parsing input HTML and filtering it through a white-list of permitted
+tags and attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Clean(string bodyHtml, string baseUri, Whitelist whitelist)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bodyHtml</span></td>
+        <td><p>input untrusted HTML (body fragment)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>URL to resolve relative URLs against</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><span class="parametername">whitelist</span></td>
+        <td><p>white-list of permitted HTML elements</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>safe HTML (body fragment)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_Clean_System_String_System_String_Supremes_Safety_Whitelist__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Safety.Cleaner.html#Supremes_Safety_Cleaner_Clean_Supremes_Nodes_Document_">Clean(Document)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Dcsoup_Clean_" data-uid="Supremes.Dcsoup.Clean*"></a>
+  <h4 id="Supremes_Dcsoup_Clean_System_String_System_String_Supremes_Safety_Whitelist_Supremes_Nodes_DocumentOutputSettings_" data-uid="Supremes.Dcsoup.Clean(System.String,System.String,Supremes.Safety.Whitelist,Supremes.Nodes.DocumentOutputSettings)">Clean(String, String, Whitelist, DocumentOutputSettings)</h4>
+  <div class="markdown level1 summary"><p>Get safe HTML from untrusted input HTML,
+by parsing input HTML and filtering it through a white-list of permitted tags and attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Clean(string bodyHtml, string baseUri, Whitelist whitelist, DocumentOutputSettings outputSettings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bodyHtml</span></td>
+        <td><p>input untrusted HTML (body fragment)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>URL to resolve relative URLs against</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><span class="parametername">whitelist</span></td>
+        <td><p>white-list of permitted HTML elements</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.DocumentOutputSettings.html">DocumentOutputSettings</a></td>
+        <td><span class="parametername">outputSettings</span></td>
+        <td><p>document output settings; use to control pretty-printing and entity escape modes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>safe HTML (body fragment)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_Clean_System_String_System_String_Supremes_Safety_Whitelist_Supremes_Nodes_DocumentOutputSettings__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Safety.Cleaner.html#Supremes_Safety_Cleaner_Clean_Supremes_Nodes_Document_">Clean(Document)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Dcsoup_IsValid_" data-uid="Supremes.Dcsoup.IsValid*"></a>
+  <h4 id="Supremes_Dcsoup_IsValid_System_String_Supremes_Safety_Whitelist_" data-uid="Supremes.Dcsoup.IsValid(System.String,Supremes.Safety.Whitelist)">IsValid(String, Whitelist)</h4>
+  <div class="markdown level1 summary"><p>Test if the input HTML has only tags and attributes allowed by the Whitelist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValid(string bodyHtml, Whitelist whitelist)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bodyHtml</span></td>
+        <td><p>HTML to test</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><span class="parametername">whitelist</span></td>
+        <td><p>whitelist to test against</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if no tags or attributes were removed; false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_IsValid_System_String_Supremes_Safety_Whitelist__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Useful for form validation. The input HTML should
+still be run through the cleaner to set up enforced attributes, and to tidy the output.</p>
+</div>
+  <h5 id="Supremes_Dcsoup_IsValid_System_String_Supremes_Safety_Whitelist__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Dcsoup.html#Supremes_Dcsoup_Clean_System_String_Supremes_Safety_Whitelist_">Clean(String, Whitelist)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Dcsoup_Parse_" data-uid="Supremes.Dcsoup.Parse*"></a>
+  <h4 id="Supremes_Dcsoup_Parse_HttpResponseMessage_" data-uid="Supremes.Dcsoup.Parse(HttpResponseMessage)">Parse(HttpResponseMessage)</h4>
+  <div class="markdown level1 summary"><p>Parse HTML into a Document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document Parse(this HttpResponseMessage self)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HttpResponseMessage</span></td>
+        <td><span class="parametername">self</span></td>
+        <td><p>The input <see cref="!:HttpResponseMessage"></see>,
+which acts as the <strong>this</strong> instance for the extension method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>sane HTML document</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Dcsoup_Parse_" data-uid="Supremes.Dcsoup.Parse*"></a>
+  <h4 id="Supremes_Dcsoup_Parse_Stream_System_String_System_String_" data-uid="Supremes.Dcsoup.Parse(Stream,System.String,System.String)">Parse(Stream, String, String)</h4>
+  <div class="markdown level1 summary"><p>Read an input stream, and parse it to a Document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document Parse(Stream in, string charsetName, string baseUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Stream</span></td>
+        <td><span class="parametername">in</span></td>
+        <td><p>input stream to read. Make sure to close it after parsing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">charsetName</span></td>
+        <td><p>(optional) character set of file contents. Set to
+<code>null</code>
+to determine from
+<code>http-equiv</code>
+meta tag, if present, or fall back to
+<code>UTF-8</code>
+(which is often safe to do).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>The URL where the HTML was retrieved from, to resolve relative links against.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>sane HTML</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Dcsoup_Parse_" data-uid="Supremes.Dcsoup.Parse*"></a>
+  <h4 id="Supremes_Dcsoup_Parse_Stream_System_String_System_String_Supremes_Parsers_Parser_" data-uid="Supremes.Dcsoup.Parse(Stream,System.String,System.String,Supremes.Parsers.Parser)">Parse(Stream, String, String, Parser)</h4>
+  <div class="markdown level1 summary"><p>Read an input stream, and parse it to a Document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document Parse(Stream in, string charsetName, string baseUri, Parser parser)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Stream</span></td>
+        <td><span class="parametername">in</span></td>
+        <td><p>input stream to read. Make sure to close it after parsing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">charsetName</span></td>
+        <td><p>(optional) character set of file contents. Set to
+<code>null</code>
+to determine from
+<code>http-equiv</code>
+meta tag, if present, or fall back to
+<code>UTF-8</code>
+(which is often safe to do).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>The URL where the HTML was retrieved from, to resolve relative links against.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Supremes.Parsers.Parser.html">Parser</a></td>
+        <td><span class="parametername">parser</span></td>
+        <td><p>alternate
+<a class="xref" href="Supremes.Parsers.Parser.html#Supremes_Parsers_Parser_XmlParser">XmlParser</a>
+to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>sane HTML</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_Parse_Stream_System_String_System_String_Supremes_Parsers_Parser__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>You can provide an alternate parser, such as a simple XML
+(non-HTML) parser.</p>
+</div>
+  
+  
+  <a id="Supremes_Dcsoup_Parse_" data-uid="Supremes.Dcsoup.Parse*"></a>
+  <h4 id="Supremes_Dcsoup_Parse_System_String_" data-uid="Supremes.Dcsoup.Parse(System.String)">Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Parse HTML into a Document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document Parse(string html)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">html</span></td>
+        <td><p>HTML to parse</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>sane HTML</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>As no base URI is specified, absolute URL detection relies on the HTML including a
+<code>&lt;base href&gt;</code>
+tag.</p>
+</div>
+  <h5 id="Supremes_Dcsoup_Parse_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Dcsoup.html#Supremes_Dcsoup_Parse_System_String_System_String_">Parse(String, String)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Dcsoup_Parse_" data-uid="Supremes.Dcsoup.Parse*"></a>
+  <h4 id="Supremes_Dcsoup_Parse_System_String_System_String_" data-uid="Supremes.Dcsoup.Parse(System.String,System.String)">Parse(String, String)</h4>
+  <div class="markdown level1 summary"><p>Parse HTML into a Document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document Parse(string html, string baseUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">html</span></td>
+        <td><p>HTML to parse</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>The URL where the HTML was retrieved from. Used to resolve relative URLs to absolute URLs, that occur
+before the HTML declares a
+<code>&lt;base href&gt;</code>
+tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>sane HTML</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_Parse_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The parser will make a sensible, balanced document tree out of any HTML.</p>
+</div>
+  
+  
+  <a id="Supremes_Dcsoup_Parse_" data-uid="Supremes.Dcsoup.Parse*"></a>
+  <h4 id="Supremes_Dcsoup_Parse_System_String_System_String_Supremes_Parsers_Parser_" data-uid="Supremes.Dcsoup.Parse(System.String,System.String,Supremes.Parsers.Parser)">Parse(String, String, Parser)</h4>
+  <div class="markdown level1 summary"><p>Parse HTML into a Document, using the provided Parser.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document Parse(string html, string baseUri, Parser parser)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">html</span></td>
+        <td><p>HTML to parse</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>The URL where the HTML was retrieved from. Used to resolve relative URLs to absolute URLs, that occur
+before the HTML declares a
+<code>&lt;base href&gt;</code>
+tag.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Supremes.Parsers.Parser.html">Parser</a></td>
+        <td><span class="parametername">parser</span></td>
+        <td><p>alternate
+<a class="xref" href="Supremes.Parsers.Parser.html#Supremes_Parsers_Parser_XmlParser">XmlParser</a>
+to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>sane HTML</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_Parse_System_String_System_String_Supremes_Parsers_Parser__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>You can provide an alternate parser, such as a simple XML
+(non-HTML) parser.</p>
+</div>
+  
+  
+  <a id="Supremes_Dcsoup_Parse_" data-uid="Supremes.Dcsoup.Parse*"></a>
+  <h4 id="Supremes_Dcsoup_Parse_Uri_System_Int32_" data-uid="Supremes.Dcsoup.Parse(Uri,System.Int32)">Parse(Uri, Int32)</h4>
+  <div class="markdown level1 summary"><p>Fetch a URL, and parse it as HTML.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document Parse(Uri url, int timeoutMillis)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Uri</span></td>
+        <td><span class="parametername">url</span></td>
+        <td><p>URL to fetch (with a GET). The protocol must be
+<code>http</code>
+or
+<code>https</code>
+.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeoutMillis</span></td>
+        <td><p>Connection and read timeout, in milliseconds. If exceeded, IOException is thrown.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>The parsed HTML.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_Parse_Uri_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Provided for compatibility.
+</p>
+<p>
+The encoding character set is determined by the content-type header or http-equiv meta tag, or falls back to
+<code>UTF-8</code>
+.
+</p>
+</div>
+  
+  
+  <a id="Supremes_Dcsoup_ParseBodyFragment_" data-uid="Supremes.Dcsoup.ParseBodyFragment*"></a>
+  <h4 id="Supremes_Dcsoup_ParseBodyFragment_System_String_" data-uid="Supremes.Dcsoup.ParseBodyFragment(System.String)">ParseBodyFragment(String)</h4>
+  <div class="markdown level1 summary"><p>Parse a fragment of HTML, with the assumption that it forms the
+<code>body</code>
+of the HTML.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document ParseBodyFragment(string bodyHtml)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bodyHtml</span></td>
+        <td><p>body HTML fragment</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>sane HTML document</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_ParseBodyFragment_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Nodes.Document.html#Supremes_Nodes_Document_Body">Body</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Dcsoup_ParseBodyFragment_" data-uid="Supremes.Dcsoup.ParseBodyFragment*"></a>
+  <h4 id="Supremes_Dcsoup_ParseBodyFragment_System_String_System_String_" data-uid="Supremes.Dcsoup.ParseBodyFragment(System.String,System.String)">ParseBodyFragment(String, String)</h4>
+  <div class="markdown level1 summary"><p>Parse a fragment of HTML, with the assumption that it forms the
+<code>body</code>
+of the HTML.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document ParseBodyFragment(string bodyHtml, string baseUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bodyHtml</span></td>
+        <td><p>body HTML fragment</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>URL to resolve relative URLs against.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>sane HTML document</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_ParseBodyFragment_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Nodes.Document.html#Supremes_Nodes_Document_Body">Body</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Dcsoup_ParseFile_" data-uid="Supremes.Dcsoup.ParseFile*"></a>
+  <h4 id="Supremes_Dcsoup_ParseFile_System_String_System_String_" data-uid="Supremes.Dcsoup.ParseFile(System.String,System.String)">ParseFile(String, String)</h4>
+  <div class="markdown level1 summary"><p>Parse the contents of a file as HTML.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document ParseFile(string in, string charsetName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">in</span></td>
+        <td><p>file to load HTML from</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">charsetName</span></td>
+        <td><p>(optional) character set of file contents. Set to
+<code>null</code>
+to determine from
+<code>http-equiv</code>
+meta tag, if present, or fall back to
+<code>UTF-8</code>
+(which is often safe to do).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>sane HTML</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Dcsoup_ParseFile_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The location of the file is used as the base URI to qualify relative URLs.</p>
+</div>
+  <h5 id="Supremes_Dcsoup_ParseFile_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Dcsoup.html#Supremes_Dcsoup_ParseFile_System_String_System_String_System_String_">ParseFile(String, String, String)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Dcsoup_ParseFile_" data-uid="Supremes.Dcsoup.ParseFile*"></a>
+  <h4 id="Supremes_Dcsoup_ParseFile_System_String_System_String_System_String_" data-uid="Supremes.Dcsoup.ParseFile(System.String,System.String,System.String)">ParseFile(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Parse the contents of a file as HTML.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document ParseFile(string in, string charsetName, string baseUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">in</span></td>
+        <td><p>file to load HTML from</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">charsetName</span></td>
+        <td><p>(optional) character set of file contents. Set to
+<code>null</code>
+to determine from
+<code>http-equiv</code>
+meta tag, if present, or fall back to
+<code>UTF-8</code>
+(which is often safe to do).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>The URL where the HTML was retrieved from, to resolve relative links against.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>sane HTML</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

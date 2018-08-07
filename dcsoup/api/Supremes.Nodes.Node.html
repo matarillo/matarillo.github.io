@@ -1,0 +1,1237 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Node
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Node
+   ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Supremes.Nodes.Node">
+  
+  
+  <h1 id="Supremes_Nodes_Node" data-uid="Supremes.Nodes.Node" class="text-break">Class Node
+  </h1>
+  <div class="markdown level0 summary"><p>The base, abstract Node model.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Node</span></div>
+      <div class="level2"><a class="xref" href="Supremes.Nodes.Comment.html">Comment</a></div>
+      <div class="level2"><a class="xref" href="Supremes.Nodes.DataNode.html">DataNode</a></div>
+      <div class="level2"><a class="xref" href="Supremes.Nodes.Element.html">Element</a></div>
+      <div class="level2"><a class="xref" href="Supremes.Nodes.TextNode.html">TextNode</a></div>
+      <div class="level2"><a class="xref" href="Supremes.Nodes.XmlDeclaration.html">XmlDeclaration</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Supremes.Nodes.html">Supremes.Nodes</a></h6>
+  <h6><strong>Assembly</strong>: Supremes.dll</h6>
+  <h5 id="Supremes_Nodes_Node_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class Node : object</code></pre>
+  </div>
+  <h5 id="Supremes_Nodes_Node_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Elements, Documents, Comments etc are all Node instances.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Supremes_Nodes_Node_Attributes_" data-uid="Supremes.Nodes.Node.Attributes*"></a>
+  <h4 id="Supremes_Nodes_Node_Attributes" data-uid="Supremes.Nodes.Node.Attributes">Attributes</h4>
+  <div class="markdown level1 summary"><p>Get all of the element's attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Attributes Attributes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Attributes.html">Attributes</a></td>
+        <td><p>attributes (which implements iterable, in same order as presented in original HTML).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_BaseUri_" data-uid="Supremes.Nodes.Node.BaseUri*"></a>
+  <h4 id="Supremes_Nodes_Node_BaseUri" data-uid="Supremes.Nodes.Node.BaseUri">BaseUri</h4>
+  <div class="markdown level1 summary"><p>Get or Set the base URI of this node.
+When set, it updates the base URI of this node and all of its descendants.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BaseUri { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>base URI to set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_ChildNodes_" data-uid="Supremes.Nodes.Node.ChildNodes*"></a>
+  <h4 id="Supremes_Nodes_Node_ChildNodes" data-uid="Supremes.Nodes.Node.ChildNodes">ChildNodes</h4>
+  <div class="markdown level1 summary"><p>Get this node's children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Node&gt; ChildNodes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Supremes.Nodes.Node.html">Node</a>&gt;</td>
+        <td><p>list of children. If no children, returns an empty list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_ChildNodes_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Presented as an unmodifiable list: new children can not be added, but the child nodes
+themselves can be manipulated.</p>
+</div>
+  
+  
+  <a id="Supremes_Nodes_Node_ChildNodeSize_" data-uid="Supremes.Nodes.Node.ChildNodeSize*"></a>
+  <h4 id="Supremes_Nodes_Node_ChildNodeSize" data-uid="Supremes.Nodes.Node.ChildNodeSize">ChildNodeSize</h4>
+  <div class="markdown level1 summary"><p>Get the number of child nodes that this node holds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ChildNodeSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the number of child nodes that this node holds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_NextSibling_" data-uid="Supremes.Nodes.Node.NextSibling*"></a>
+  <h4 id="Supremes_Nodes_Node_NextSibling" data-uid="Supremes.Nodes.Node.NextSibling">NextSibling</h4>
+  <div class="markdown level1 summary"><p>Get this node's next sibling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node NextSibling { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>next sibling, or null if this is the last sibling</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_OuterHtml_" data-uid="Supremes.Nodes.Node.OuterHtml*"></a>
+  <h4 id="Supremes_Nodes_Node_OuterHtml" data-uid="Supremes.Nodes.Node.OuterHtml">OuterHtml</h4>
+  <div class="markdown level1 summary"><p>Get the outer HTML of this node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string OuterHtml { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>HTML</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_OwnerDocument_" data-uid="Supremes.Nodes.Node.OwnerDocument*"></a>
+  <h4 id="Supremes_Nodes_Node_OwnerDocument" data-uid="Supremes.Nodes.Node.OwnerDocument">OwnerDocument</h4>
+  <div class="markdown level1 summary"><p>Gets the Document associated with this Node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Document OwnerDocument { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Document.html">Document</a></td>
+        <td><p>the Document associated with this Node, or null if there is no such Document.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_Parent_" data-uid="Supremes.Nodes.Node.Parent*"></a>
+  <h4 id="Supremes_Nodes_Node_Parent" data-uid="Supremes.Nodes.Node.Parent">Parent</h4>
+  <div class="markdown level1 summary"><p>Gets this node's parent node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node Parent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>parent node; or null if no parent.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_PreviousSibling_" data-uid="Supremes.Nodes.Node.PreviousSibling*"></a>
+  <h4 id="Supremes_Nodes_Node_PreviousSibling" data-uid="Supremes.Nodes.Node.PreviousSibling">PreviousSibling</h4>
+  <div class="markdown level1 summary"><p>Get this node's previous sibling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node PreviousSibling { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>the previous sibling, or null if this is the first sibling</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_SiblingIndex_" data-uid="Supremes.Nodes.Node.SiblingIndex*"></a>
+  <h4 id="Supremes_Nodes_Node_SiblingIndex" data-uid="Supremes.Nodes.Node.SiblingIndex">SiblingIndex</h4>
+  <div class="markdown level1 summary"><p>Get the list index of this node in its node sibling list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SiblingIndex { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>position in node sibling list</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_SiblingIndex_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>I.e. if this is the first node sibling, returns 0.</p>
+</div>
+  <h5 id="Supremes_Nodes_Node_SiblingIndex_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Nodes.Element.html#Supremes_Nodes_Element_ElementSiblingIndex">ElementSiblingIndex</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_Node_SiblingNodes_" data-uid="Supremes.Nodes.Node.SiblingNodes*"></a>
+  <h4 id="Supremes_Nodes_Node_SiblingNodes" data-uid="Supremes.Nodes.Node.SiblingNodes">SiblingNodes</h4>
+  <div class="markdown level1 summary"><p>Retrieves this node's sibling nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Node&gt; SiblingNodes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Supremes.Nodes.Node.html">Node</a>&gt;</td>
+        <td><p>node siblings. If the node has no parent, returns an empty list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_SiblingNodes_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Similar to
+<a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_ChildNodes">ChildNodes</a>
+, but does not
+include this node (a node is not a sibling of itself).</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Supremes_Nodes_Node_AbsUrl_" data-uid="Supremes.Nodes.Node.AbsUrl*"></a>
+  <h4 id="Supremes_Nodes_Node_AbsUrl_System_String_" data-uid="Supremes.Nodes.Node.AbsUrl(System.String)">AbsUrl(String)</h4>
+  <div class="markdown level1 summary"><p>Get an absolute URL from a URL attribute that may be relative
+(i.e. an <code>&lt;a href&gt;</code> or <code>&lt;img src&gt;</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string AbsUrl(string attributeKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">attributeKey</span></td>
+        <td><p>The attribute key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>An absolute URL if one could be made, or an empty string (not null) if the attribute was missing or
+could not be made successfully into a URL.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_AbsUrl_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+E.g.: <code>string absUrl = linkEl.AbsUrl(&quot;href&quot;);</code>
+</p>
+<p>
+If the attribute value is already absolute (i.e. it starts with a protocol, like
+<code>http://</code> or <code>https://</code> etc), and it successfully parses as a URL, the attribute is
+returned directly. Otherwise, it is treated as a URL relative to the element&apos;s
+<a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_BaseUri">BaseUri</a>
+, and made
+absolute using that.
+</p>
+<p>
+As an alternate, you can use the
+<a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_Attr_System_String_">Attr(String)</a>
+method with the <code>abs:</code> prefix, e.g.:
+<code>string absUrl = linkEl.Attr(&quot;abs:href&quot;);</code>
+</p>
+<p>
+This method add trailing slash to domain name: i.e.
+from <code>&lt;a id=2 href=&apos;http://jsoup.org&apos;></code>
+to <code>&quot;http://jsoup.org/&quot;</code>
+</p>
+</div>
+  <h5 id="Supremes_Nodes_Node_AbsUrl_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_Attr_System_String_">Attr(String)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_Node_After_" data-uid="Supremes.Nodes.Node.After*"></a>
+  <h4 id="Supremes_Nodes_Node_After_Supremes_Nodes_Node_" data-uid="Supremes.Nodes.Node.After(Supremes.Nodes.Node)">After(Node)</h4>
+  <div class="markdown level1 summary"><p>Insert the specified node into the DOM after this node (i.e. as a following sibling).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Node After(Node node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>to add after this node</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>this node, for chaining</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_After_Supremes_Nodes_Node__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_Before_Supremes_Nodes_Node_">Before(Node)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_Node_After_" data-uid="Supremes.Nodes.Node.After*"></a>
+  <h4 id="Supremes_Nodes_Node_After_System_String_" data-uid="Supremes.Nodes.Node.After(System.String)">After(String)</h4>
+  <div class="markdown level1 summary"><p>Insert the specified HTML into the DOM after this node (i.e. as a following sibling).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Node After(string html)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">html</span></td>
+        <td><p>HTML to add after this node</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>this node, for chaining</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_After_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_Before_System_String_">Before(String)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_Node_Attr_" data-uid="Supremes.Nodes.Node.Attr*"></a>
+  <h4 id="Supremes_Nodes_Node_Attr_System_String_" data-uid="Supremes.Nodes.Node.Attr(System.String)">Attr(String)</h4>
+  <div class="markdown level1 summary"><p>Get an attribute's value by its key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Attr(string attributeKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">attributeKey</span></td>
+        <td><p>The attribute key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The attribute, or empty string if not present (to avoid nulls).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_Attr_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>To get an absolute URL from an attribute that may be a relative URL, prefix the key with <code><strong>abs</strong></code>,
+which is a shortcut to the
+<a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_AbsUrl_System_String_">AbsUrl(String)</a>
+method.
+E.g.: <blockquote><code>String url = a.attr(&quot;abs:href&quot;);</code></blockquote></p>
+</div>
+  <h5 id="Supremes_Nodes_Node_Attr_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_Attributes">Attributes</a></div>
+      <div><a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_HasAttr_System_String_">HasAttr(String)</a></div>
+      <div><a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_AbsUrl_System_String_">AbsUrl(String)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_Node_Attr_" data-uid="Supremes.Nodes.Node.Attr*"></a>
+  <h4 id="Supremes_Nodes_Node_Attr_System_String_System_String_" data-uid="Supremes.Nodes.Node.Attr(System.String,System.String)">Attr(String, String)</h4>
+  <div class="markdown level1 summary"><p>Set an attribute (key=value).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Node Attr(string attributeKey, string attributeValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">attributeKey</span></td>
+        <td><p>The attribute key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">attributeValue</span></td>
+        <td><p>The attribute value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>this (for chaining)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_Attr_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the attribute already exists, it is replaced.</p>
+</div>
+  
+  
+  <a id="Supremes_Nodes_Node_Before_" data-uid="Supremes.Nodes.Node.Before*"></a>
+  <h4 id="Supremes_Nodes_Node_Before_Supremes_Nodes_Node_" data-uid="Supremes.Nodes.Node.Before(Supremes.Nodes.Node)">Before(Node)</h4>
+  <div class="markdown level1 summary"><p>Insert the specified node into the DOM before this node (i.e. as a preceding sibling).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Node Before(Node node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>to add before this node</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>this node, for chaining</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_Before_Supremes_Nodes_Node__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_After_Supremes_Nodes_Node_">After(Node)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_Node_Before_" data-uid="Supremes.Nodes.Node.Before*"></a>
+  <h4 id="Supremes_Nodes_Node_Before_System_String_" data-uid="Supremes.Nodes.Node.Before(System.String)">Before(String)</h4>
+  <div class="markdown level1 summary"><p>Insert the specified HTML into the DOM before this node (i.e. as a preceding sibling).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Node Before(string html)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">html</span></td>
+        <td><p>HTML to add before this node</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>this node, for chaining</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_Before_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_After_System_String_">After(String)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_Node_ChildNode_" data-uid="Supremes.Nodes.Node.ChildNode*"></a>
+  <h4 id="Supremes_Nodes_Node_ChildNode_System_Int32_" data-uid="Supremes.Nodes.Node.ChildNode(System.Int32)">ChildNode(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get a child node by its 0-based index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node ChildNode(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>index of child node</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>the child node at this index. Throws a
+<code>IndexOutOfBoundsException</code>
+if the index is out of bounds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_ChildNodesCopy_" data-uid="Supremes.Nodes.Node.ChildNodesCopy*"></a>
+  <h4 id="Supremes_Nodes_Node_ChildNodesCopy" data-uid="Supremes.Nodes.Node.ChildNodesCopy">ChildNodesCopy()</h4>
+  <div class="markdown level1 summary"><p>Returns a deep copy of this node's children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;Node&gt; ChildNodesCopy()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<a class="xref" href="Supremes.Nodes.Node.html">Node</a>&gt;</td>
+        <td><p>a deep copy of this node's children</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_ChildNodesCopy_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Changes made to these nodes will not be reflected in the original nodes</p>
+</div>
+  
+  
+  <a id="Supremes_Nodes_Node_Equals_" data-uid="Supremes.Nodes.Node.Equals*"></a>
+  <h4 id="Supremes_Nodes_Node_Equals_System_Object_" data-uid="Supremes.Nodes.Node.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="Supremes.Nodes.Node.html">Node</a> instances for equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_GetHashCode_" data-uid="Supremes.Nodes.Node.GetHashCode*"></a>
+  <h4 id="Supremes_Nodes_Node_GetHashCode" data-uid="Supremes.Nodes.Node.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_HasAttr_" data-uid="Supremes.Nodes.Node.HasAttr*"></a>
+  <h4 id="Supremes_Nodes_Node_HasAttr_System_String_" data-uid="Supremes.Nodes.Node.HasAttr(System.String)">HasAttr(String)</h4>
+  <div class="markdown level1 summary"><p>Test if this element has an attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasAttr(string attributeKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">attributeKey</span></td>
+        <td><p>The attribute key to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the attribute exists, false if not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_Remove_" data-uid="Supremes.Nodes.Node.Remove*"></a>
+  <h4 id="Supremes_Nodes_Node_Remove" data-uid="Supremes.Nodes.Node.Remove">Remove()</h4>
+  <div class="markdown level1 summary"><p>Remove (delete) this node from the DOM tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove()</code></pre>
+  </div>
+  <h5 id="Supremes_Nodes_Node_Remove_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If this node has children, they are also removed.</p>
+</div>
+  
+  
+  <a id="Supremes_Nodes_Node_RemoveAttr_" data-uid="Supremes.Nodes.Node.RemoveAttr*"></a>
+  <h4 id="Supremes_Nodes_Node_RemoveAttr_System_String_" data-uid="Supremes.Nodes.Node.RemoveAttr(System.String)">RemoveAttr(String)</h4>
+  <div class="markdown level1 summary"><p>Remove an attribute from this element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Node RemoveAttr(string attributeKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">attributeKey</span></td>
+        <td><p>The attribute to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>this (for chaining)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_ReplaceWith_" data-uid="Supremes.Nodes.Node.ReplaceWith*"></a>
+  <h4 id="Supremes_Nodes_Node_ReplaceWith_Supremes_Nodes_Node_" data-uid="Supremes.Nodes.Node.ReplaceWith(Supremes.Nodes.Node)">ReplaceWith(Node)</h4>
+  <div class="markdown level1 summary"><p>Replace this node in the DOM with the supplied node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReplaceWith(Node in)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><span class="parametername">in</span></td>
+        <td><p>the node that will will replace the existing node.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_ToString_" data-uid="Supremes.Nodes.Node.ToString*"></a>
+  <h4 id="Supremes_Nodes_Node_ToString" data-uid="Supremes.Nodes.Node.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Converts the value of this instance to a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Nodes_Node_Unwrap_" data-uid="Supremes.Nodes.Node.Unwrap*"></a>
+  <h4 id="Supremes_Nodes_Node_Unwrap" data-uid="Supremes.Nodes.Node.Unwrap">Unwrap()</h4>
+  <div class="markdown level1 summary"><p>Removes this node from the DOM, and moves its children up into the node's parent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node Unwrap()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>the first child of this node, after the node has been unwrapped. Null if the node had no children.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Nodes_Node_Unwrap_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This has the effect of dropping the node but keeping its children.</p>
+<p>
+For example, with the input html:<br>
+<code>&lt;div>One &lt;span>Two &lt;b>Three&lt;/b>&lt;/span>&lt;/div></code>
+<br>
+Calling
+<code>element.Unwrap()</code>
+on the
+<code>span</code>
+element will result in the html:<br>
+<code>&lt;div>One Two &lt;b>Three&lt;/b>&lt;/div></code>
+<br>
+and the
+<code>&quot;Two &quot;</code>
+<a class="xref" href="Supremes.Nodes.TextNode.html">TextNode</a>
+being returned.
+</div>
+  <h5 id="Supremes_Nodes_Node_Unwrap_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_Remove">Remove()</a></div>
+      <div><a class="xref" href="Supremes.Nodes.Node.html#Supremes_Nodes_Node_Wrap_System_String_">Wrap(String)</a></div>
+  </div>
+  
+  
+  <a id="Supremes_Nodes_Node_Wrap_" data-uid="Supremes.Nodes.Node.Wrap*"></a>
+  <h4 id="Supremes_Nodes_Node_Wrap_System_String_" data-uid="Supremes.Nodes.Node.Wrap(System.String)">Wrap(String)</h4>
+  <div class="markdown level1 summary"><p>Wrap the supplied HTML around this node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node Wrap(string html)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">html</span></td>
+        <td><p>HTML to wrap around this element, e.g.
+<code>&lt;div class=&quot;head&quot;&gt;&lt;/div&gt;</code>
+. Can be arbitrarily deep.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Nodes.Node.html">Node</a></td>
+        <td><p>this node, for chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

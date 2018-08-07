@@ -1,0 +1,665 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Whitelist
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Whitelist
+   ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Supremes.Safety.Whitelist">
+  
+  
+  <h1 id="Supremes_Safety_Whitelist" data-uid="Supremes.Safety.Whitelist" class="text-break">Class Whitelist
+  </h1>
+  <div class="markdown level0 summary"><p>Whitelists define what HTML (elements and attributes) to allow through the cleaner.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Whitelist</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Supremes.Safety.html">Supremes.Safety</a></h6>
+  <h6><strong>Assembly</strong>: Supremes.dll</h6>
+  <h5 id="Supremes_Safety_Whitelist_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Whitelist : object</code></pre>
+  </div>
+  <h5 id="Supremes_Safety_Whitelist_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Everything else is removed.</p>
+<p>
+Start with one of the defaults:
+<ul>
+<li>
+<a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_None">None</a>
+</li>
+<li>
+<a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_SimpleText">SimpleText</a>
+</li>
+<li>
+<a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_Basic">Basic</a>
+</li>
+<li>
+<a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_BasicWithImages">BasicWithImages</a>
+</li>
+<li>
+<a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_Relaxed">Relaxed</a>
+</li>
+</ul>
+<p>
+If you need to allow more through (please be careful!), tweak a base whitelist with:
+<ul>
+<li>
+<a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_AddTags_System_String___">AddTags(String[])</a>
+</li>
+<li>
+<a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_AddAttributes_System_String_System_String___">AddAttributes(String, String[])</a>
+</li>
+<li>
+<a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_AddEnforcedAttribute_System_String_System_String_System_String_">AddEnforcedAttribute(String, String, String)</a>
+</li>
+<li>
+<a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_AddProtocols_System_String_System_String_System_String___">AddProtocols(String, String, String[])</a>
+</li>
+</ul>
+<p>
+The cleaner and these whitelists assume that you want to clean a <code>body</code> fragment of HTML (to add user
+supplied HTML into a templated page), and not to clean a full HTML document. If the latter is the case, either wrap the
+document HTML around the cleaned body HTML, or create a whitelist that allows <code>html</code> and <code>head</code>
+elements as appropriate.
+<p>
+If you are going to extend a whitelist, please be very careful. Make sure you understand what attributes may lead to
+XSS attack vectors. URL attributes are particularly vulnerable and require careful validation. See
+http://ha.ckers.org/xss.html for some XSS attack examples.
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Supremes_Safety_Whitelist__ctor_" data-uid="Supremes.Safety.Whitelist.#ctor*"></a>
+  <h4 id="Supremes_Safety_Whitelist__ctor" data-uid="Supremes.Safety.Whitelist.#ctor">Whitelist()</h4>
+  <div class="markdown level1 summary"><p>Create a new, empty whitelist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Whitelist()</code></pre>
+  </div>
+  <h5 id="Supremes_Safety_Whitelist__ctor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Generally it will be better to start with a default prepared whitelist instead.</p>
+</div>
+  <h5 id="Supremes_Safety_Whitelist__ctor_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_Basic">Basic</a></div>
+      <div><a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_BasicWithImages">BasicWithImages</a></div>
+      <div><a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_SimpleText">SimpleText</a></div>
+      <div><a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_Relaxed">Relaxed</a></div>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Supremes_Safety_Whitelist_Basic_" data-uid="Supremes.Safety.Whitelist.Basic*"></a>
+  <h4 id="Supremes_Safety_Whitelist_Basic" data-uid="Supremes.Safety.Whitelist.Basic">Basic</h4>
+  <div class="markdown level1 summary"><p>This whitelist allows a fuller range of text nodes: <code>a, b, blockquote, br, cite, code, dd, dl, dt, em, i, li,
+ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>, and appropriate attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Whitelist Basic { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><p>whitelist</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Safety_Whitelist_Basic_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Links (<code>a</code> elements) can point to <code>http, https, ftp, mailto</code>, and have an enforced
+<code>rel=nofollow</code> attribute.
+</p>
+<p>
+Does not allow images.
+</p>
+</div>
+  
+  
+  <a id="Supremes_Safety_Whitelist_BasicWithImages_" data-uid="Supremes.Safety.Whitelist.BasicWithImages*"></a>
+  <h4 id="Supremes_Safety_Whitelist_BasicWithImages" data-uid="Supremes.Safety.Whitelist.BasicWithImages">BasicWithImages</h4>
+  <div class="markdown level1 summary"><p>This whitelist allows the same text tags as
+<a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_Basic">Basic</a>
+, and also allows <code>img</code> tags, with appropriate
+attributes, with <code>src</code> pointing to <code>http</code> or <code>https</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Whitelist BasicWithImages { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><p>whitelist</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Safety_Whitelist_None_" data-uid="Supremes.Safety.Whitelist.None*"></a>
+  <h4 id="Supremes_Safety_Whitelist_None" data-uid="Supremes.Safety.Whitelist.None">None</h4>
+  <div class="markdown level1 summary"><p>This whitelist allows only text nodes: all HTML will be stripped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Whitelist None { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><p>whitelist</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Supremes_Safety_Whitelist_Relaxed_" data-uid="Supremes.Safety.Whitelist.Relaxed*"></a>
+  <h4 id="Supremes_Safety_Whitelist_Relaxed" data-uid="Supremes.Safety.Whitelist.Relaxed">Relaxed</h4>
+  <div class="markdown level1 summary"><p>This whitelist allows a full range of text and structural body HTML: <code>a, b, blockquote, br, caption, cite,
+code, col, colgroup, dd, div, dl, dt, em, h1, h2, h3, h4, h5, h6, i, img, li, ol, p, pre, q, small, span, strike, strong, sub,
+sup, table, tbody, td, tfoot, th, thead, tr, u, ul</code></p>
+<p>
+Links do not have an enforced <code>rel=nofollow</code> attribute, but you can add that if desired.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Whitelist Relaxed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><p>whitelist</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Safety_Whitelist_Relaxed_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This whitelist allows a full range of text and structural body HTML: <code>a, b, blockquote, br, caption, cite,
+code, col, colgroup, dd, div, dl, dt, em, h1, h2, h3, h4, h5, h6, i, img, li, ol, p, pre, q, small, span, strike, strong, sub,
+sup, table, tbody, td, tfoot, th, thead, tr, u, ul</code></p>
+<p>
+Links do not have an enforced <code>rel=nofollow</code> attribute, but you can add that if desired.
+</div>
+  
+  
+  <a id="Supremes_Safety_Whitelist_SimpleText_" data-uid="Supremes.Safety.Whitelist.SimpleText*"></a>
+  <h4 id="Supremes_Safety_Whitelist_SimpleText" data-uid="Supremes.Safety.Whitelist.SimpleText">SimpleText</h4>
+  <div class="markdown level1 summary"><p>This whitelist allows only simple text formatting: <code>b, em, i, strong, u</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Whitelist SimpleText { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><p>whitelist</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Safety_Whitelist_SimpleText_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>All other HTML (tags and attributes) will be removed.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Supremes_Safety_Whitelist_AddAttributes_" data-uid="Supremes.Safety.Whitelist.AddAttributes*"></a>
+  <h4 id="Supremes_Safety_Whitelist_AddAttributes_System_String_System_String___" data-uid="Supremes.Safety.Whitelist.AddAttributes(System.String,System.String[])">AddAttributes(String, String[])</h4>
+  <div class="markdown level1 summary"><p>Add a list of allowed attributes to a tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Whitelist AddAttributes(string tag, params string[] keys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The tag the attributes are for. The tag will be added to the allowed tag list if necessary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>List of valid attributes for the tag</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><p>this (for chaining)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Safety_Whitelist_AddAttributes_System_String_System_String____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>(If an attribute is not allowed on an element, it will be removed.)</p>
+<p>
+E.g.: <code>addAttributes(&quot;a&quot;, &quot;href&quot;, &quot;class&quot;)</code> allows <code>href</code> and <code>class</code> attributes
+on <code>a</code> tags.
+<p>
+To make an attribute valid for <strong>all tags</strong>, use the pseudo tag <code>:all</code>, e.g.
+<code>addAttributes(&quot;:all&quot;, &quot;class&quot;)</code>.
+</div>
+  
+  
+  <a id="Supremes_Safety_Whitelist_AddEnforcedAttribute_" data-uid="Supremes.Safety.Whitelist.AddEnforcedAttribute*"></a>
+  <h4 id="Supremes_Safety_Whitelist_AddEnforcedAttribute_System_String_System_String_System_String_" data-uid="Supremes.Safety.Whitelist.AddEnforcedAttribute(System.String,System.String,System.String)">AddEnforcedAttribute(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Add an enforced attribute to a tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Whitelist AddEnforcedAttribute(string tag, string key, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The tag the enforced attribute is for. The tag will be added to the allowed tag list if necessary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The attribute key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The enforced attribute value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><p>this (for chaining)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Safety_Whitelist_AddEnforcedAttribute_System_String_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>An enforced attribute will always be added to the element. If the element
+already has the attribute set, it will be overridden.</p>
+<p>
+E.g.: <code>AddEnforcedAttribute(&quot;a&quot;, &quot;rel&quot;, &quot;nofollow&quot;)</code> will make all <code>a</code> tags output as
+<code>&lt;a href=&quot;...&quot; rel=&quot;nofollow&quot;></code>
+</div>
+  
+  
+  <a id="Supremes_Safety_Whitelist_AddProtocols_" data-uid="Supremes.Safety.Whitelist.AddProtocols*"></a>
+  <h4 id="Supremes_Safety_Whitelist_AddProtocols_System_String_System_String_System_String___" data-uid="Supremes.Safety.Whitelist.AddProtocols(System.String,System.String,System.String[])">AddProtocols(String, String, String[])</h4>
+  <div class="markdown level1 summary"><p>Add allowed URL protocols for an element's URL attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Whitelist AddProtocols(string tag, string key, params string[] protocols)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>Tag the URL protocol is for</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Attribute key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">protocols</span></td>
+        <td><p>List of valid protocols</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><p>this, for chaining</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Safety_Whitelist_AddProtocols_System_String_System_String_System_String____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This restricts the possible values of the attribute to
+URLs with the defined protocol.</p>
+<p>
+E.g.: <code>AddProtocols(&quot;a&quot;, &quot;href&quot;, &quot;ftp&quot;, &quot;http&quot;, &quot;https&quot;)</code>
+</div>
+  
+  
+  <a id="Supremes_Safety_Whitelist_AddTags_" data-uid="Supremes.Safety.Whitelist.AddTags*"></a>
+  <h4 id="Supremes_Safety_Whitelist_AddTags_System_String___" data-uid="Supremes.Safety.Whitelist.AddTags(System.String[])">AddTags(String[])</h4>
+  <div class="markdown level1 summary"><p>Add a list of allowed elements to a whitelist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Whitelist AddTags(params string[] tags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">tags</span></td>
+        <td><p>tag names to allow</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><p>this (for chaining)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Safety_Whitelist_AddTags_System_String____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>(If a tag is not allowed, it will be removed from the HTML.)</p>
+</div>
+  
+  
+  <a id="Supremes_Safety_Whitelist_PreserveRelativeLinks_" data-uid="Supremes.Safety.Whitelist.PreserveRelativeLinks*"></a>
+  <h4 id="Supremes_Safety_Whitelist_PreserveRelativeLinks_System_Boolean_" data-uid="Supremes.Safety.Whitelist.PreserveRelativeLinks(System.Boolean)">PreserveRelativeLinks(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Configure this Whitelist to preserve relative links in an element's URL attribute, or convert them to absolute
+links.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Whitelist PreserveRelativeLinks(bool preserve)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">preserve</span></td>
+        <td><p><code>true</code>
+to allow relative links,
+<code>false</code>
+(default) to deny</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Supremes.Safety.Whitelist.html">Whitelist</a></td>
+        <td><p>this Whitelist, for chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Supremes_Safety_Whitelist_PreserveRelativeLinks_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Configure this Whitelist to preserve relative links in an element's URL attribute, or convert them to absolute
+links. By default, this is <strong>false</strong>: URLs will be  made absolute (e.g. start with an allowed protocol, like
+e.g.
+<code>http://</code>
+.</p>
+<p>
+Note that when handling relative links, the input document must have an appropriate
+<code>base URI</code>
+set when
+parsing, so that the link&apos;s protocol can be confirmed. Regardless of the setting of the
+<code>preserve relative
+links</code>
+option, the link must be resolvable against the base URI to an allowed protocol; otherwise the attribute
+will be removed.
+</div>
+  <h5 id="Supremes_Safety_Whitelist_PreserveRelativeLinks_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Supremes.Safety.Whitelist.html#Supremes_Safety_Whitelist_AddProtocols_System_String_System_String_System_String___">AddProtocols(String, String, String[])</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
