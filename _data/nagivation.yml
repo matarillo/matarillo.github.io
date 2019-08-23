@@ -1,0 +1,9 @@
+# documentation links
+docs:
+  - title: Foo
+    children:
+      - title: "Top"
+        url: /
+      - title: "Test"
+        url: /test/
+
