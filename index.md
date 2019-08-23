@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Top"
 sidebar:
   nav: "docs"
