@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ if gt (len .Pages) 0 }}
+<div class="content">
+  <h1>{{ .Title }}</h1>
+  <ul>
+    {{ range .Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</div>
+{{ else }}
+<div class="content">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</div>
+<h5 class="is-size-6 has-text-right">{{ .Date.Format "2006-01-02 15:04:06" }}</h5>
+{{ end }}
+{{ end }}

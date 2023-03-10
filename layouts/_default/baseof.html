@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a href="{{ .Site.BaseURL }}" class="navbar-item is-size-4 has-text-weight-semibold">
+          {{ .Site.Title }}
+        </a>
+      </div>
+    </div>
+  </header>
+  <section class="section">
+    <div class="container columns">
+      <aside class="menu column is-one-quarter">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <p class="menu-label">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </p>
+        {{ if .HasChildren }}
+        <ul class="menu-list">
+          {{ range .Children }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+        {{ end }}
+        {{ range .Site.Sections }}
+        <p class="menu-label">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </p>
+        {{ if gt (len .Pages) 0 }}
+        <ul class="menu-list">
+          {{ range .Pages }}
+          <li><a href="{{ .RelPermalink }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+        {{ end }}
+      </aside>
+      <main class="column">
+        <div class="box card">
+          <div class="card-content">
+            {{ block "main" . }}
+            {{ end }}
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
+</body>
+
+</html>

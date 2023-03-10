@@ -1,0 +1,23 @@
+baseURL = 'http://matarillo.github.io/'
+languageCode = 'ja-jp'
+title = 'matarillo.github.io'
+disableKinds = ["taxonomy", "term"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+      name = "Home"
+      url = "/"
+      weight = 1
+  [[menu.main]]
+      name = "dcsoup"
+      url = "/dcsoup/"
+      weight = 2
+  [[menu.main]]
+      name = "Word Brain"
+      url = "/wordbrain/"
+      weight = 3
