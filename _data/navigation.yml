@@ -1,6 +1,9 @@
-- title: Foo
+- title: Menu
   children:
     - title: "Top"
       url: /
     - title: "Test"
       url: /test/
+    - title: "Slide Decks"
+      url: /deck/
+
