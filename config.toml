@@ -21,3 +21,7 @@ disableKinds = ["taxonomy", "term"]
       name = "Word Brain"
       url = "/wordbrain/"
       weight = 3
+  [[menu.main]]
+      name = "MML Player"
+      url = "/mmlplayer/"
+      weight = 4
