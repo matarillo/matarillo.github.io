@@ -1,0 +1,311 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" preserveAspectRatio="none" version="1.1" viewBox="0 0 1279 771" zoomAndPan="magnify"><defs/>
+<g><!--class Semigroup--><g class="entity" data-entity="Semigroup" data-source-line="5" data-uid="ent0002" id="entity_Semigroup"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-semigroup.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-semigroup.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-semigroup.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-semigroup.html" xlink:type="simple"><rect fill="#F1F1F1" height="64.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="107.9951" x="505.15" y="163.89"/>
+<ellipse cx="520.15" cy="179.89" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M520.2594,175.2338 L519.1031,180.3119 L521.4313,180.3119 L520.2594,175.2338 Z M518.775,172.9994 L521.7594,172.9994 L525.1188,185.39 L522.6656,185.39 L521.9,182.3275 L518.6188,182.3275 L517.8688,185.39 L515.4313,185.39 L518.775,172.9994 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="75.9951" x="534.15" y="184.7367">Semigroup</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="506.15" x2="612.1451" y1="195.89" y2="195.89"/>
+<line style="stroke:#181818;stroke-width:0.5;" x1="506.15" x2="612.1451" y1="203.89" y2="203.89"/>
+<ellipse cx="516.15" cy="217.5384" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48.125" x="525.15" y="220.8851">(+) x y</text>
+</a>
+</g>
+<!--class Comonad--><g class="entity" data-entity="Comonad" data-source-line="9" data-uid="ent0003" id="entity_Comonad"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-comonad.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-comonad.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-comonad.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-comonad.html" xlink:type="simple"><rect fill="#F1F1F1" height="96.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="184.6553" x="647.82" y="147.6"/>
+<ellipse cx="702.4562" cy="163.6" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M702.5656,158.9437 L701.4094,164.0219 L703.7375,164.0219 L702.5656,158.9437 Z M701.0812,156.7094 L704.0656,156.7094 L707.425,169.1 L704.9719,169.1 L704.2062,166.0375 L700.925,166.0375 L700.175,169.1 L697.7375,169.1 L701.0812,156.7094 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="66.8828" x="722.9562" y="168.4467">Comonad</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="648.82" x2="831.4753" y1="179.6" y2="179.6"/>
+<ellipse cx="658.82" cy="193.2484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62.6445" x="667.82" y="196.5951">extract x</text>
+<ellipse cx="658.82" cy="209.5453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158.6553" x="667.82" y="212.892">(=&gt;&gt;) s g | extend s g</text>
+<line style="stroke:#181818;stroke-width:1;" x1="648.82" x2="831.4753" y1="220.1937" y2="220.1937"/>
+<line style="stroke:#181818;stroke-width:1;" x1="648.82" x2="831.4753" y1="222.1937" y2="222.1937"/>
+<ellipse cx="658.82" cy="233.8422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.54" x="667.82" y="237.1889">duplicate x</text>
+</a>
+</g>
+<!--class Monoid--><g class="entity" data-entity="Monoid" data-source-line="17" data-uid="ent0004" id="entity_Monoid"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-monoid.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-monoid.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-monoid.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-monoid.html" xlink:type="simple"><rect fill="#F1F1F1" height="96.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="257.834" x="430.23" y="320.78"/>
+<ellipse cx="529.4673" cy="336.78" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M529.5767,332.1238 L528.4204,337.2019 L530.7486,337.2019 L529.5767,332.1238 Z M528.0923,329.8894 L531.0767,329.8894 L534.4361,342.28 L531.9829,342.28 L531.2173,339.2175 L527.9361,339.2175 L527.1861,342.28 L524.7486,342.28 L528.0923,329.8894 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="50.8594" x="549.9673" y="341.6267">Monoid</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="431.23" x2="687.064" y1="352.78" y2="352.78"/>
+<ellipse cx="441.23" cy="366.4284" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30.2832" x="450.23" y="369.7751">zero</text>
+<ellipse cx="441.23" cy="382.7253" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="231.834" x="450.23" y="386.072">(+) x y {Appends both monoids}</text>
+<line style="stroke:#181818;stroke-width:1;" x1="431.23" x2="687.064" y1="393.3738" y2="393.3738"/>
+<line style="stroke:#181818;stroke-width:1;" x1="431.23" x2="687.064" y1="395.3738" y2="395.3738"/>
+<ellipse cx="441.23" cy="407.0222" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73.377" x="450.23" y="410.3689">Seq.sum x</text>
+</a>
+</g>
+<!--class Functor--><g class="entity" data-entity="Functor" data-source-line="25" data-uid="ent0005" id="entity_Functor"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-functor.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-functor.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-functor.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-functor.html" xlink:type="simple"><rect fill="#F1F1F1" height="80.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85.3066" x="697.5" y="7"/>
+<ellipse cx="712.5" cy="23" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M712.6094,18.3438 L711.4531,23.4219 L713.7813,23.4219 L712.6094,18.3438 Z M711.125,16.1094 L714.1094,16.1094 L717.4688,28.5 L715.0156,28.5 L714.25,25.4375 L710.9688,25.4375 L710.2188,28.5 L707.7813,28.5 L711.125,16.1094 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="53.3066" x="726.5" y="27.8467">Functor</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="698.5" x2="781.8066" y1="39" y2="39"/>
+<ellipse cx="708.5" cy="52.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.2178" x="717.5" y="55.9951">map f x</text>
+<line style="stroke:#181818;stroke-width:1;" x1="698.5" x2="781.8066" y1="63.2969" y2="63.2969"/>
+<line style="stroke:#181818;stroke-width:1;" x1="698.5" x2="781.8066" y1="65.2969" y2="65.2969"/>
+<ellipse cx="708.5" cy="76.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.6064" x="717.5" y="80.292">unzip x</text>
+</a>
+</g>
+<!--class Contravariant--><g class="entity" data-entity="Contravariant" data-source-line="31" data-uid="ent0006" id="entity_Contravariant"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-contravariant.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-contravariant.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-contravariant.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-contravariant.html" xlink:type="simple"><rect fill="#F1F1F1" height="64.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="128.4893" x="941.9" y="15.15"/>
+<ellipse cx="956.9" cy="31.15" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M957.0094,26.4937 L955.8531,31.5719 L958.1813,31.5719 L957.0094,26.4937 Z M955.525,24.2594 L958.5094,24.2594 L961.8688,36.65 L959.4156,36.65 L958.65,33.5875 L955.3688,33.5875 L954.6188,36.65 L952.1813,36.65 L955.525,24.2594 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="96.4893" x="970.9" y="35.9967">Contravariant</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="942.9" x2="1069.3893" y1="47.15" y2="47.15"/>
+<ellipse cx="952.9" cy="60.7984" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98.1777" x="961.9" y="64.1451">contramap f x</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="942.9" x2="1069.3893" y1="71.4469" y2="71.4469"/>
+</a>
+</g>
+<!--class Applicative--><g class="entity" data-entity="Applicative" data-source-line="36" data-uid="ent0007" id="entity_Applicative"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-applicative.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-applicative.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-applicative.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-applicative.html" xlink:type="simple"><rect fill="#F1F1F1" height="113.1875" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="109.6836" x="216.31" y="312.64"/>
+<ellipse cx="231.31" cy="328.64" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M231.4194,323.9837 L230.2631,329.0619 L232.5913,329.0619 L231.4194,323.9837 Z M229.935,321.7494 L232.9194,321.7494 L236.2788,334.14 L233.8256,334.14 L233.06,331.0775 L229.7788,331.0775 L229.0288,334.14 L226.5913,334.14 L229.935,321.7494 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="77.6836" x="245.31" y="333.4867">Applicative</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="217.31" x2="324.9936" y1="344.64" y2="344.64"/>
+<ellipse cx="227.31" cy="358.2884" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56.0957" x="236.31" y="361.6351">return x</text>
+<ellipse cx="227.31" cy="374.5853" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.499" x="236.31" y="377.932">(&lt;*&gt;) f x</text>
+<line style="stroke:#181818;stroke-width:1;" x1="217.31" x2="324.9936" y1="385.2337" y2="385.2337"/>
+<line style="stroke:#181818;stroke-width:1;" x1="217.31" x2="324.9936" y1="387.2337" y2="387.2337"/>
+<ellipse cx="227.31" cy="398.8822" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.2178" x="236.31" y="402.2289">map f x</text>
+<ellipse cx="227.31" cy="415.1791" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61.9541" x="236.31" y="418.5257">lift2 f x y</text>
+</a>
+</g>
+<!--class Alternative--><g class="entity" data-entity="Alternative" data-source-line="44" data-uid="ent0008" id="entity_Alternative"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-alternative.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-alternative.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-alternative.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-alternative.html" xlink:type="simple"><rect fill="#F1F1F1" height="96.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="109.0547" x="61.62" y="667.16"/>
+<ellipse cx="76.62" cy="683.16" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M76.7294,678.5038 L75.5731,683.5819 L77.9013,683.5819 L76.7294,678.5038 Z M75.245,676.2694 L78.2294,676.2694 L81.5888,688.66 L79.1356,688.66 L78.37,685.5975 L75.0888,685.5975 L74.3388,688.66 L71.9013,688.66 L75.245,676.2694 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="77.0547" x="90.62" y="688.0067">Alternative</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="62.62" x2="169.6747" y1="699.16" y2="699.16"/>
+<ellipse cx="72.62" cy="712.8084" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.9121" x="81.62" y="716.1551">empty</text>
+<ellipse cx="72.62" cy="729.1053" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61.2158" x="81.62" y="732.452">(&lt;|&gt;) f x</text>
+<line style="stroke:#181818;stroke-width:1;" x1="62.62" x2="169.6747" y1="739.7538" y2="739.7538"/>
+<line style="stroke:#181818;stroke-width:1;" x1="62.62" x2="169.6747" y1="741.7538" y2="741.7538"/>
+<ellipse cx="72.62" cy="753.4022" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72.2764" x="81.62" y="756.7489">mfilter p x</text>
+</a>
+</g>
+<!--class ZipApplicative--><g class="entity" data-entity="ZipApplicative" data-source-line="51" data-uid="ent0009" id="entity_ZipApplicative"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-zipapplicative.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-zipapplicative.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-zipapplicative.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-zipapplicative.html" xlink:type="simple"><rect fill="#F1F1F1" height="113.1875" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="132.0508" x="50.12" y="493.97"/>
+<ellipse cx="65.12" cy="509.97" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M65.2294,505.3138 L64.0731,510.3919 L66.4013,510.3919 L65.2294,505.3138 Z M63.745,503.0794 L66.7294,503.0794 L70.0888,515.47 L67.6356,515.47 L66.87,512.4075 L63.5888,512.4075 L62.8388,515.47 L60.4013,515.47 L63.745,503.0794 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="100.0508" x="79.12" y="514.8167">ZipApplicative</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="51.12" x2="181.1708" y1="525.97" y2="525.97"/>
+<ellipse cx="61.12" cy="539.6184" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36.251" x="70.12" y="542.9651">pur x</text>
+<ellipse cx="61.12" cy="555.9153" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60.9492" x="70.12" y="559.262">(&lt;.&gt;) f x</text>
+<line style="stroke:#181818;stroke-width:1;" x1="51.12" x2="181.1708" y1="566.5638" y2="566.5638"/>
+<line style="stroke:#181818;stroke-width:1;" x1="51.12" x2="181.1708" y1="568.5638" y2="568.5638"/>
+<ellipse cx="61.12" cy="580.2122" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.2178" x="70.12" y="583.5589">map f x</text>
+<ellipse cx="61.12" cy="596.5091" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74.8604" x="70.12" y="599.8557">map2 f x y</text>
+</a>
+</g>
+<!--class Monad--><g class="entity" data-entity="Monad" data-source-line="59" data-uid="ent0010" id="entity_Monad"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-monad.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-monad.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-monad.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-monad.html" xlink:type="simple"><rect fill="#F1F1F1" height="113.1875" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="94.2295" x="359.03" y="493.97"/>
+<ellipse cx="380.8907" cy="509.97" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M381.0001,505.3138 L379.8439,510.3919 L382.172,510.3919 L381.0001,505.3138 Z M379.5157,503.0794 L382.5001,503.0794 L385.8595,515.47 L383.4064,515.47 L382.6407,512.4075 L379.3595,512.4075 L378.6095,515.47 L376.172,515.47 L379.5157,503.0794 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="46.9834" x="396.4154" y="514.8167">Monad</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="360.03" x2="452.2595" y1="525.97" y2="525.97"/>
+<ellipse cx="370.03" cy="539.6184" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56.0957" x="379.03" y="542.9651">return x</text>
+<ellipse cx="370.03" cy="555.9153" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.2295" x="379.03" y="559.262">(&gt;&gt;=) x f</text>
+<line style="stroke:#181818;stroke-width:1;" x1="360.03" x2="452.2595" y1="566.5638" y2="566.5638"/>
+<line style="stroke:#181818;stroke-width:1;" x1="360.03" x2="452.2595" y1="568.5638" y2="568.5638"/>
+<ellipse cx="370.03" cy="580.2122" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.2178" x="379.03" y="583.5589">map f x</text>
+<ellipse cx="370.03" cy="596.5091" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37.9531" x="379.03" y="599.8557">join x</text>
+</a>
+</g>
+<!--class Bifunctor--><g class="entity" data-entity="Bifunctor" data-source-line="68" data-uid="ent0011" id="entity_Bifunctor"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-bifunctor.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-bifunctor.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-bifunctor.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-bifunctor.html" xlink:type="simple"><rect fill="#F1F1F1" height="96.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="105.3311" x="293.48" y="147.6"/>
+<ellipse cx="312.8244" cy="163.6" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M312.9338,158.9437 L311.7776,164.0219 L314.1057,164.0219 L312.9338,158.9437 Z M311.4494,156.7094 L314.4338,156.7094 L317.7932,169.1 L315.3401,169.1 L314.5744,166.0375 L311.2932,166.0375 L310.5432,169.1 L308.1057,169.1 L311.4494,156.7094 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="63.6768" x="327.7899" y="168.4467">Bifunctor</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="294.48" x2="397.8111" y1="179.6" y2="179.6"/>
+<ellipse cx="304.48" cy="193.2484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="79.3311" x="313.48" y="196.5951">bimap f g x</text>
+<ellipse cx="304.48" cy="209.5453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49.4717" x="313.48" y="212.892">first f x</text>
+<ellipse cx="304.48" cy="225.8422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72.0439" x="313.48" y="229.1889">second f x</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="294.48" x2="397.8111" y1="236.4906" y2="236.4906"/>
+</a>
+</g>
+<!--class Foldable--><g class="entity" data-entity="Foldable" data-source-line="76" data-uid="ent0012" id="entity_Foldable"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-foldable.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-foldable.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-foldable.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-foldable.html" xlink:type="simple"><rect fill="#F1F1F1" height="64.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="91.3633" x="740.47" y="518.42"/>
+<ellipse cx="755.47" cy="534.42" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M755.5794,529.7638 L754.4231,534.8419 L756.7513,534.8419 L755.5794,529.7638 Z M754.095,527.5294 L757.0794,527.5294 L760.4388,539.92 L757.9856,539.92 L757.22,536.8575 L753.9388,536.8575 L753.1888,539.92 L750.7513,539.92 L754.095,527.5294 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="59.3633" x="769.47" y="539.2667">Foldable</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="741.47" x2="830.8333" y1="550.42" y2="550.42"/>
+<ellipse cx="751.47" cy="564.0684" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="53.1768" x="760.47" y="567.4151">toSeq x</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="741.47" x2="830.8333" y1="574.7169" y2="574.7169"/>
+</a>
+</g>
+<!--class Bifoldable--><g class="entity" data-entity="Bifoldable" data-source-line="80" data-uid="ent0013" id="entity_Bifoldable"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-bifoldable.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-bifoldable.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-bifoldable.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-bifoldable.html" xlink:type="simple"><rect fill="#F1F1F1" height="113.1875" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="146.2852" x="559.01" y="493.97"/>
+<ellipse cx="594.0583" cy="509.97" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M594.1677,505.3138 L593.0114,510.3919 L595.3395,510.3919 L594.1677,505.3138 Z M592.6833,503.0794 L595.6677,503.0794 L599.027,515.47 L596.5739,515.47 L595.8083,512.4075 L592.527,512.4075 L591.777,515.47 L589.3395,515.47 L592.6833,503.0794 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="69.7334" x="612.5135" y="514.8167">Bifoldable</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="560.01" x2="704.2952" y1="525.97" y2="525.97"/>
+<ellipse cx="570.01" cy="539.6184" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="104.043" x="579.01" y="542.9651">bifoldMap f g x</text>
+<ellipse cx="570.01" cy="555.9153" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="86.2969" x="579.01" y="559.262">bifold f g z x</text>
+<ellipse cx="570.01" cy="572.2122" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="120.2852" x="579.01" y="575.5589">bifoldBack f g x z</text>
+<ellipse cx="570.01" cy="588.5091" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55.3164" x="579.01" y="591.8557">bisum x</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="560.01" x2="704.2952" y1="599.1575" y2="599.1575"/>
+</a>
+</g>
+<!--class Traversable--><g class="entity" data-entity="Traversable" data-source-line="87" data-uid="ent0014" id="entity_Traversable"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-traversable.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-traversable.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-traversable.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-traversable.html" xlink:type="simple"><rect fill="#F1F1F1" height="80.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="114.8037" x="728.75" y="675.31"/>
+<ellipse cx="743.75" cy="691.31" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M743.8594,686.6538 L742.7031,691.7319 L745.0313,691.7319 L743.8594,686.6538 Z M742.375,684.4194 L745.3594,684.4194 L748.7188,696.81 L746.2656,696.81 L745.5,693.7475 L742.2188,693.7475 L741.4688,696.81 L739.0313,696.81 L742.375,684.4194 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="82.8037" x="757.75" y="696.1567">Traversable</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="729.75" x2="842.5537" y1="707.31" y2="707.31"/>
+<ellipse cx="739.75" cy="720.9584" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="80.5" x="748.75" y="724.3051">traverse f x</text>
+<ellipse cx="739.75" cy="737.2553" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80.1992" x="748.75" y="740.602">sequence x</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="729.75" x2="842.5537" y1="747.9038" y2="747.9038"/>
+</a>
+</g>
+<!--class Bitraversable--><g class="entity" data-entity="Bitraversable" data-source-line="92" data-uid="ent0015" id="entity_Bitraversable"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-bitraversable.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-bitraversable.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-bitraversable.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-bitraversable.html" xlink:type="simple"><rect fill="#F1F1F1" height="80.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125.2354" x="387.53" y="675.31"/>
+<ellipse cx="402.53" cy="691.31" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M402.6394,686.6538 L401.4831,691.7319 L403.8113,691.7319 L402.6394,686.6538 Z M401.155,684.4194 L404.1394,684.4194 L407.4988,696.81 L405.0456,696.81 L404.28,693.7475 L400.9988,693.7475 L400.2488,696.81 L397.8113,696.81 L401.155,684.4194 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="93.2354" x="416.53" y="696.1567">Bitraversable</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="388.53" x2="511.7654" y1="707.31" y2="707.31"/>
+<ellipse cx="398.53" cy="720.9584" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="93.2764" x="407.53" y="724.3051">bitraverse f x</text>
+<ellipse cx="398.53" cy="737.2553" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92.9756" x="407.53" y="740.602">bisequence x</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="388.53" x2="511.7654" y1="747.9038" y2="747.9038"/>
+</a>
+</g>
+<!--class Profunctor--><g class="entity" data-entity="Profunctor" data-source-line="98" data-uid="ent0016" id="entity_Profunctor"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-profunctor.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-profunctor.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-profunctor.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-profunctor.html" xlink:type="simple"><rect fill="#F1F1F1" height="96.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="105.3311" x="938.48" y="147.6"/>
+<ellipse cx="953.6531" cy="163.6" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M953.7625,158.9437 L952.6063,164.0219 L954.9344,164.0219 L953.7625,158.9437 Z M952.2781,156.7094 L955.2625,156.7094 L958.6219,169.1 L956.1688,169.1 L955.4031,166.0375 L952.1219,166.0375 L951.3719,169.1 L948.9344,169.1 L952.2781,156.7094 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="72.9463" x="967.6916" y="168.4467">Profunctor</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="939.48" x2="1042.8111" y1="179.6" y2="179.6"/>
+<ellipse cx="949.48" cy="193.2484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="79.3311" x="958.48" y="196.5951">dimap f g x</text>
+<ellipse cx="949.48" cy="209.5453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57.1074" x="958.48" y="212.892">lmap f x</text>
+<ellipse cx="949.48" cy="225.8422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58.9736" x="958.48" y="229.1889">rmap f x</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="939.48" x2="1042.8111" y1="236.4906" y2="236.4906"/>
+</a>
+</g>
+<!--class Category--><g class="entity" data-entity="Category" data-source-line="104" data-uid="ent0017" id="entity_Category"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-category.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-category.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-category.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-category.html" xlink:type="simple"><rect fill="#F1F1F1" height="96.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95.9502" x="1079.17" y="147.6"/>
+<ellipse cx="1094.17" cy="163.6" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M1094.2794,158.9437 L1093.1231,164.0219 L1095.4512,164.0219 L1094.2794,158.9437 Z M1092.795,156.7094 L1095.7794,156.7094 L1099.1387,169.1 L1096.6856,169.1 L1095.92,166.0375 L1092.6387,166.0375 L1091.8887,169.1 L1089.4512,169.1 L1092.795,156.7094 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="63.9502" x="1108.17" y="168.4467">Category</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="1080.17" x2="1174.1202" y1="179.6" y2="179.6"/>
+<ellipse cx="1090.17" cy="193.2484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34.7813" x="1099.17" y="196.5951">catId</text>
+<ellipse cx="1090.17" cy="209.5453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.8311" x="1099.17" y="212.892">(&lt;&lt;&lt;) f g</text>
+<line style="stroke:#181818;stroke-width:1;" x1="1080.17" x2="1174.1202" y1="220.1937" y2="220.1937"/>
+<line style="stroke:#181818;stroke-width:1;" x1="1080.17" x2="1174.1202" y1="222.1937" y2="222.1937"/>
+<ellipse cx="1090.17" cy="233.8422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.8311" x="1099.17" y="237.1889">(&gt;&gt;&gt;) f g</text>
+</a>
+</g>
+<!--class Arrow--><g class="entity" data-entity="Arrow" data-source-line="112" data-uid="ent0018" id="entity_Arrow"><a href="http://fsprojects.github.io/FSharpPlus/abstraction-arrow.html" target="_top" title="http://fsprojects.github.io/FSharpPlus/abstraction-arrow.html" xlink:actuate="onRequest" xlink:href="http://fsprojects.github.io/FSharpPlus/abstraction-arrow.html" xlink:show="new" xlink:title="http://fsprojects.github.io/FSharpPlus/abstraction-arrow.html" xlink:type="simple"><rect fill="#F1F1F1" height="129.4844" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="120.3291" x="1151.98" y="304.49"/>
+<ellipse cx="1188.2311" cy="320.49" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+<path d="M1188.3404,315.8337 L1187.1842,320.9119 L1189.5123,320.9119 L1188.3404,315.8337 Z M1186.8561,313.5994 L1189.8404,313.5994 L1193.1998,325.99 L1190.7467,325.99 L1189.9811,322.9275 L1186.6998,322.9275 L1185.9498,325.99 L1183.5123,325.99 L1186.8561,313.5994 Z " fill="#000000"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="41.1045" x="1206.9535" y="325.3367">Arrow</text>
+<line style="stroke:#181818;stroke-width:0.5;" x1="1152.98" x2="1271.3091" y1="336.49" y2="336.49"/>
+<ellipse cx="1162.98" cy="350.1384" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29.4697" x="1171.98" y="353.4851">arr f</text>
+<ellipse cx="1162.98" cy="366.4353" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73.2881" x="1171.98" y="369.782">arrFirst f g</text>
+<line style="stroke:#181818;stroke-width:1;" x1="1152.98" x2="1271.3091" y1="377.0837" y2="377.0837"/>
+<line style="stroke:#181818;stroke-width:1;" x1="1152.98" x2="1271.3091" y1="379.0837" y2="379.0837"/>
+<ellipse cx="1162.98" cy="390.7322" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94.3291" x="1171.98" y="394.0789">arrSecond f g</text>
+<ellipse cx="1162.98" cy="407.0291" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.6396" x="1171.98" y="410.3757">(***) f g</text>
+<ellipse cx="1162.98" cy="423.3259" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/>
+<text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66.3906" x="1171.98" y="426.6726">(&amp;&amp;&amp;) f g</text>
+</a>
+</g>
+<ellipse cx="905.15" cy="47.3" fill="#181818" rx="2" ry="2" style="stroke:#181818;stroke-width:1;"/>
+<ellipse cx="1212.15" cy="196.04" fill="#181818" rx="2" ry="2" style="stroke:#181818;stroke-width:1;"/>
+<!--link Semigroup to Monoid--><g class="link" data-entity-1="Semigroup" data-entity-2="Monoid" data-source-line="123" data-uid="lnk19" id="link_Semigroup_Monoid"><path codeLine="123" d="M559.15,228.44 C559.15,254.21 559.15,273.12 559.15,302.54" fill="none" id="Semigroup-to-Monoid" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="559.15,320.54,565.15,302.54,553.15,302.54,559.15,320.54" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Functor to Bifunctor--><g class="link" data-entity-1="Functor" data-entity-2="Bifunctor" data-source-line="124" data-uid="lnk20" id="link_Functor_Bifunctor"><path codeLine="124" d="M697.18,56.2 C635.18,68.6 518.02,95.84 426.15,139.6 C416.99,143.96 422.8918,139.6029 414.0818,145.2529" fill="none" id="Functor-to-Bifunctor" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="398.93,154.97,417.3209,150.3035,410.8428,140.2023,398.93,154.97" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Functor to Applicative--><g class="link" data-entity-1="Functor" data-entity-2="Applicative" data-source-line="125" data-uid="lnk21" id="link_Functor_Applicative"><path codeLine="125" d="M697.42,55.19 C643.92,65.63 551.7,89.75 489.15,139.6 C442.42,176.83 456.24,208.19 416.15,252.49 C389.56,281.86 369.5658,299.0861 340.8858,320.1161" fill="none" id="Functor-to-Applicative" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="326.37,330.76,344.4337,324.9547,337.3378,315.2775,326.37,330.76" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Applicative to Monad--><g class="link" data-entity-1="Applicative" data-entity-2="Monad" data-source-line="126" data-uid="lnk22" id="link_Applicative_Monad"><path codeLine="126" d="M313.12,425.99 C329.3,447.48 336.9411,457.6417 353.1411,479.1517" fill="none" id="Applicative-to-Monad" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="363.97,493.53,357.9339,475.5421,348.3484,482.7613,363.97,493.53" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Applicative to Alternative--><g class="link" data-entity-1="Applicative" data-entity-2="Alternative" data-source-line="127" data-uid="lnk23" id="link_Applicative_Alternative"><path codeLine="127" d="M215.9,381.39 C158.59,396.23 71.91,428.61 32.15,493.97 C6,536.95 15.76,559.6 32.15,607.16 C39.63,628.87 42.0161,635.6993 56.3661,653.0193" fill="none" id="Applicative-to-Alternative" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="67.85,666.88,60.9863,649.1913,51.7458,656.8472,67.85,666.88" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link ZipApplicative to Alternative--><g class="link" data-entity-1="ZipApplicative" data-entity-2="Alternative" data-source-line="128" data-uid="lnk24" id="link_ZipApplicative_Alternative"><path codeLine="128" d="M116.15,607.22 C116.15,626.59 116.15,630.14 116.15,648.81" fill="none" id="ZipApplicative-to-Alternative" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="116.15,666.81,122.15,648.81,110.15,648.81,116.15,666.81" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Monoid to Monad--><g class="link" data-entity-1="Monoid" data-entity-2="Monad" data-source-line="129" data-uid="lnk25" id="link_Monoid_Monad"><path codeLine="129" d="M518.55,417.82 C498.63,441.17 486.1946,455.748 465.4146,480.098" fill="none" id="Monoid-to-Monad" style="stroke:#181818;stroke-width:1;stroke-dasharray:7.0,7.0;"/>
+<polygon fill="none" points="453.73,493.79,469.9786,483.9929,460.8506,476.2032,453.73,493.79" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Monoid to Foldable--><g class="link" data-entity-1="Monoid" data-entity-2="Foldable" data-source-line="130" data-uid="lnk26" id="link_Monoid_Foldable"><path codeLine="130" d="M624.68,417.89 C655.05,440.42 691.38,468.03 723.15,493.97 C732.53,501.63 728.9404,498.275 738.0604,506.305" fill="none" id="Monoid-to-Foldable" style="stroke:#181818;stroke-width:1;stroke-dasharray:7.0,7.0;"/>
+<polygon fill="none" points="751.57,518.2,742.0254,501.8018,734.0954,510.8082,751.57,518.2" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Monoid to Bifoldable--><g class="link" data-entity-1="Monoid" data-entity-2="Bifoldable" data-source-line="131" data-uid="lnk27" id="link_Monoid_Bifoldable"><path codeLine="131" d="M578.52,417.82 C588.02,441.17 592.7389,452.7702 602.6589,477.1202" fill="none" id="Monoid-to-Bifoldable" style="stroke:#181818;stroke-width:1;stroke-dasharray:7.0,7.0;"/>
+<polygon fill="none" points="609.45,493.79,608.2155,474.8565,597.1023,479.384,609.45,493.79" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Functor to Comonad--><g class="link" data-entity-1="Functor" data-entity-2="Comonad" data-source-line="132" data-uid="lnk28" id="link_Functor_Comonad"><path codeLine="132" d="M740.15,88.01 C740.15,106.26 740.15,110.06 740.15,129.2" fill="none" id="Functor-to-Comonad" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="740.15,147.2,746.15,129.2,734.15,129.2,740.15,147.2" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Functor to Traversable--><g class="link" data-entity-1="Functor" data-entity-2="Traversable" data-source-line="133" data-uid="lnk29" id="link_Functor_Traversable"><path codeLine="133" d="M783.09,71.85 C807.03,87.57 834.67,110.66 848.15,139.6 C935.89,327.97 903.61,406.62 849.15,607.16 C842.6,631.26 839.0834,640.4857 826.2734,659.8157" fill="none" id="Functor-to-Traversable" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="816.33,674.82,831.2748,663.1301,821.2719,656.5012,816.33,674.82" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Foldable to Traversable--><g class="link" data-entity-1="Foldable" data-entity-2="Traversable" data-source-line="134" data-uid="lnk30" id="link_Foldable_Traversable"><path codeLine="134" d="M786.15,583 C786.15,609.19 786.15,628.63 786.15,656.89" fill="none" id="Foldable-to-Traversable" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="786.15,674.89,792.15,656.89,780.15,656.89,786.15,674.89" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Bifoldable to Bitraversable--><g class="link" data-entity-1="Bifoldable" data-entity-2="Bitraversable" data-source-line="135" data-uid="lnk31" id="link_Bifoldable_Bitraversable"><path codeLine="135" d="M569.77,607.45 C544.97,629.66 530.4175,642.7001 507.7775,662.9801" fill="none" id="Bifoldable-to-Bitraversable" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="494.37,674.99,511.7808,667.4493,503.7742,658.5109,494.37,674.99" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Applicative to ZipApplicative--><g class="link" data-entity-1="Applicative" data-entity-2="ZipApplicative" data-source-line="136" data-uid="lnk32" id="link_Applicative_ZipApplicative"><path codeLine="136" d="M222.96,425.99 C204.38,447.48 194.9399,458.4013 176.3499,479.9113" fill="none" id="Applicative-to-ZipApplicative" style="stroke:#181818;stroke-width:1;stroke-dasharray:7.0,7.0;"/>
+<polygon fill="none" points="164.58,493.53,180.8895,483.8346,171.8104,475.988,164.58,493.53" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Applicative to Bitraversable--><g class="link" data-entity-1="Applicative" data-entity-2="Bitraversable" data-source-line="137" data-uid="lnk33" id="link_Applicative_Bitraversable"><path codeLine="137" d="M259.38,425.95 C251.72,476.68 248.3,551.87 280.15,607.16 C303.59,647.85 332.884,668.1011 371.024,685.1311" fill="none" id="Applicative-to-Bitraversable" style="stroke:#181818;stroke-width:1;stroke-dasharray:7.0,7.0;"/>
+<polygon fill="none" points="387.46,692.47,373.4703,679.6525,368.5777,690.6098,387.46,692.47" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Applicative to Traversable--><g class="link" data-entity-1="Applicative" data-entity-2="Traversable" data-source-line="138" data-uid="lnk34" id="link_Applicative_Traversable"><path codeLine="138" d="M281.02,426.17 C293.05,488.05 315.04,582.33 341.15,607.16 C369.33,633.96 596.9099,679.2745 710.7999,700.6845" fill="none" id="Applicative-to-Traversable" style="stroke:#181818;stroke-width:1;stroke-dasharray:7.0,7.0;"/>
+<polygon fill="none" points="728.49,704.01,711.9084,694.7877,709.6914,706.5812,728.49,704.01" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Monoid to Alternative--><g class="link" data-entity-1="Monoid" data-entity-2="Alternative" data-source-line="139" data-uid="lnk35" id="link_Monoid_Alternative"><path codeLine="139" d="M553.99,418.03 C545.72,471.43 524.54,556.97 471.15,607.16 C427.46,648.23 277.0767,682.8611 188.7667,700.6211" fill="none" id="Monoid-to-Alternative" style="stroke:#181818;stroke-width:1;stroke-dasharray:7.0,7.0;"/>
+<polygon fill="none" points="171.12,704.17,189.9496,706.5033,187.5837,694.7389,171.12,704.17" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Functor to apoint37--><g class="link" data-entity-1="Functor" data-entity-2="apoint37" data-source-line="141" data-uid="lnk39" id="link_Functor_apoint37"><path d="M783.01,47.3 C822.93,47.3 862.85,47.3 902.76,47.3" fill="none" id="Functor-apoint37" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link apoint37 to Contravariant--><g class="link" data-entity-1="apoint37" data-entity-2="Contravariant" data-source-line="141" data-uid="lnk40" id="link_apoint37_Contravariant"><path d="M907.52,47.3 C918.82,47.3 930.12,47.3 941.42,47.3" fill="none" id="apoint37-Contravariant" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link apoint37 to Profunctor--><g class="link" data-entity-1="apoint37" data-entity-2="Profunctor" data-source-line="141" data-uid="lnk41" id="link_apoint37_Profunctor"><path d="M905.69,49.55 C907.85,54.47 916.1,73 924.15,87.6 C935.14,107.52 938.5514,113.6981 950.2114,132.0881" fill="none" id="apoint37-to-Profunctor" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="959.85,147.29,955.2787,128.8752,945.1441,135.301,959.85,147.29" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link Profunctor to apoint43--><g class="link" data-entity-1="Profunctor" data-entity-2="apoint43" data-source-line="143" data-uid="lnk45" id="link_Profunctor_apoint43"><path d="M1030.55,147.47 C1044.47,133.86 1061.28,120.83 1079.65,113.6 C1118.52,98.29 1136.77,93.97 1173.65,113.6 C1205.16,130.37 1211.04,181.78 1211.98,193.6" fill="none" id="Profunctor-apoint43" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link apoint43 to Category--><g class="link" data-entity-1="apoint43" data-entity-2="Category" data-source-line="143" data-uid="lnk46" id="link_apoint43_Category"><path d="M1209.85,196.04 C1198.33,196.04 1186.81,196.04 1175.29,196.04" fill="none" id="apoint43-Category" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--link apoint43 to Arrow--><g class="link" data-entity-1="apoint43" data-entity-2="Arrow" data-source-line="143" data-uid="lnk47" id="link_apoint43_Arrow"><path d="M1212.15,198.52 C1212.15,207.9 1212.15,242.09 1212.15,286.15" fill="none" id="apoint43-to-Arrow" style="stroke:#181818;stroke-width:1;"/>
+<polygon fill="none" points="1212.15,304.15,1218.15,286.15,1206.15,286.15,1212.15,304.15" style="stroke:#181818;stroke-width:1;"/>
+</g>
+<!--SRC=[fLR1RkCW43sNh-1KDKdZI7jS9P7IhYhjeLAbx6ch7h2D7LeRAE1kapR_ljZO66odbPmRp33Cuy4yHhuGof50EPHlwI-IOoe9erkrpp1CK2On08gbMEsmW1_W0eLI2HGf66L8IhZ5EKa5ApXyVDmfnNyk5edaWZtZICaW9MfNX05XYxlj3Wd-a1LoqUoWiynb4nxiL9uzFPKP89p1gza4liCzk3Y2NifRbZEAud498nFSIOVVJOBtEljglPv02LFuMRemZSj9wLkjp8guu1c9aC9bo15eb1sGzumoCX9ZNiMs4Ck41omOS9Y17nlEDJ09GwPsq8J88wWWbkks-3MGHQxnQN1TT7S5ZHGJu-0b9jZ7boCE4vtCvY_eWN2JlNT_L4_Va228gh6tw6pX0p6k1ix0sJLlrTMHDpmkEMety5CBh0f1AnBqFIsd-WrvbBGSpM164lMZdEb7tgTeaoaiw3aOsmryZ3ZdQby3_Em1J4WP1uVlxI_XPtEdtyH9-dWXB7V1LzpfyMdgxiThGqSP-bUwNg_Auak6OJqpGeUVt0r9pYcua0oMt8TKciNe24DYOAGra8G8gImiYNL9nBOQUbB0iXY5sSZxJEfe5vd5DOEAQHaQV4oQahCIX-IRr6R1lKDCprbv3iE-6nIzc4Xug6WCYLNJpb7-Q2N2Geu_YsetECMZMO6TItqjC8tm2MxLkP12yZqekwQ5fKdoW7tHE3m8TbPHS1lV-SijmjWfYygJDTLQpOIT3VKO-cjFcTYF_9xgw0uoRVuTrnt6Shai5SvhAhI-h6lZK4kn4OBz6_aTbA6-UcXJ9MJLwAvMZBHLDctTDigH6lcRJgUJTdPvUMbcbQgqVI2Spp_NJVy3cax3MAqGTkpElmBSFyRkXU81k_DBWixdr5zG0me2kw5hQLJGCxOQPU5MszODg6zqL01OJUrv7Dch2N7gp3jYXS0_LT__JRYRsJsOouizXD-NWQlQSUtR9mPtMxt0AUIvhHjmrPglhRKEDY_vFm00]--></g>
+</svg>
