@@ -25,3 +25,7 @@ disableKinds = ["taxonomy", "term"]
       name = "MML Player"
       url = "/mmlplayer/"
       weight = 4
+  [[menu.main]]
+      name = "F# for Fun and Profit eBook"
+      url = "/fsharp_for_fun_and_profit-ja/"
+      weight = 5
