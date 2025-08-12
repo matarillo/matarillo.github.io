@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イラストロジック</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .game-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .info-item {
+            background: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .puzzle-selector {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        select {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        select:hover {
+            border-color: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .game-board {
+            display: inline-block;
+            position: relative;
+            margin: 0 auto;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        td {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            text-align: center;
+            position: relative;
+            user-select: none;
+        }
+
+        .cell {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .cell:hover {
+            background: #f0f0f0;
+        }
+
+        .cell.filled {
+            background: #333;
+            animation: fillCell 0.3s ease;
+        }
+
+        .cell.marked {
+            background: white;
+        }
+
+        .cell.marked::after {
+            content: '×';
+            color: #ff4444;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hint {
+            background: #f5f5f5;
+            font-weight: bold;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .hint.completed {
+            color: #4CAF50;
+            background: #e8f5e9;
+        }
+
+        .thick-border-right {
+            border-right: 2px solid #666;
+        }
+
+        .thick-border-bottom {
+            border-bottom: 2px solid #666;
+        }
+
+        .controls {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-success {
+            background: #4CAF50;
+            color: white;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .mode-indicator {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .mode-indicator.fill {
+            color: #333;
+        }
+
+        .mode-indicator.mark {
+            color: #ff4444;
+        }
+
+        @keyframes fillCell {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .win-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            z-index: 1000;
+            animation: fadeIn 0.5s;
+        }
+
+        .win-message h2 {
+            color: #4CAF50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            animation: fadeInOverlay 0.3s;
+        }
+
+        @keyframes fadeInOverlay {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 イラストロジック 🎮</h1>
+        
+        <div class="puzzle-selector">
+            <select id="puzzleSelect">
+                <option value="0">パズル1: ハート (5×5)</option>
+                <option value="1">パズル2: 家 (10×10)</option>
+                <option value="2">パズル3: スマイル (10×10)</option>
+            </select>
+        </div>
+
+        <div class="game-info">
+            <div class="info-item">タイマー: <span id="timer">00:00</span></div>
+            <div class="info-item">ミス: <span id="mistakes">0</span></div>
+        </div>
+
+        <div class="mode-indicator fill" id="modeIndicator">
+            モード: 塗りつぶし (左クリック)
+        </div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="controls">
+            <button class="btn-primary" onclick="toggleMode()">モード切替 (X)</button>
+            <button class="btn-secondary" onclick="resetPuzzle()">リセット</button>
+            <button class="btn-success" onclick="checkSolution()">答え合わせ</button>
+        </div>
+    </div>
+
+    <script>
+        // パズルデータ
+        const puzzles = [
+            {
+                name: "ハート",
+                size: 5,
+                solution: [
+                    [0, 1, 0, 1, 0],
+                    [1, 1, 1, 1, 1],
+                    [1, 1, 1, 1, 1],
+                    [0, 1, 1, 1, 0],
+                    [0, 0, 1, 0, 0]
+                ]
+            },
+            {
+                name: "家",
+                size: 10,
+                solution: [
+                    [0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
+                    [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
+                    [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    [1, 1, 1, 0, 1, 1, 0, 1, 1, 1],
+                    [1, 1, 1, 0, 1, 1, 0, 1, 1, 1],
+                    [1, 1, 1, 0, 1, 1, 0, 1, 1, 1],
+                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+                ]
+            },
+            {
+                name: "スマイル",
+                size: 10,
+                solution: [
+                    [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
+                    [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    [1, 1, 0, 1, 1, 1, 1, 0, 1, 1],
+                    [1, 1, 0, 1, 1, 1, 1, 0, 1, 1],
+                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    [1, 1, 0, 1, 1, 1, 1, 0, 1, 1],
+                    [0, 1, 1, 0, 0, 0, 0, 1, 1, 0],
+                    [0, 0, 1, 1, 1, 1, 1, 1, 0, 0]
+                ]
+            }
+        ];
+
+        let currentPuzzle = 0;
+        let playerGrid = [];
+        let isMarkMode = false;
+        let timer = 0;
+        let timerInterval = null;
+        let mistakes = 0;
+
+        function initGame() {
+            const puzzle = puzzles[currentPuzzle];
+            playerGrid = Array(puzzle.size).fill().map(() => Array(puzzle.size).fill(0));
+            mistakes = 0;
+            document.getElementById('mistakes').textContent = mistakes;
+            resetTimer();
+            createBoard();
+            startTimer();
+        }
+
+        function createBoard() {
+            const puzzle = puzzles[currentPuzzle];
+            const board = document.getElementById('gameBoard');
+            board.innerHTML = '';
+
+            const table = document.createElement('table');
+            
+            // 行ヒントの計算
+            const rowHints = [];
+            for (let i = 0; i < puzzle.size; i++) {
+                const hints = [];
+                let count = 0;
+                for (let j = 0; j < puzzle.size; j++) {
+                    if (puzzle.solution[i][j] === 1) {
+                        count++;
+                    } else if (count > 0) {
+                        hints.push(count);
+                        count = 0;
+                    }
+                }
+                if (count > 0) hints.push(count);
+                if (hints.length === 0) hints.push(0);
+                rowHints.push(hints);
+            }
+
+            // 列ヒントの計算
+            const colHints = [];
+            for (let j = 0; j < puzzle.size; j++) {
+                const hints = [];
+                let count = 0;
+                for (let i = 0; i < puzzle.size; i++) {
+                    if (puzzle.solution[i][j] === 1) {
+                        count++;
+                    } else if (count > 0) {
+                        hints.push(count);
+                        count = 0;
+                    }
+                }
+                if (count > 0) hints.push(count);
+                if (hints.length === 0) hints.push(0);
+                colHints.push(hints);
+            }
+
+            // 最大ヒント数を計算
+            const maxRowHints = Math.max(...rowHints.map(h => h.length));
+            const maxColHints = Math.max(...colHints.map(h => h.length));
+
+            // 列ヒントを表示
+            for (let i = 0; i < maxColHints; i++) {
+                const tr = table.insertRow();
+                for (let j = 0; j < maxRowHints; j++) {
+                    const td = tr.insertCell();
+                    td.className = 'hint';
+                }
+                for (let j = 0; j < puzzle.size; j++) {
+                    const td = tr.insertCell();
+                    td.className = 'hint';
+                    if (j % 5 === 4 && j < puzzle.size - 1) {
+                        td.classList.add('thick-border-right');
+                    }
+                    const hintIndex = i - (maxColHints - colHints[j].length);
+                    if (hintIndex >= 0) {
+                        td.textContent = colHints[j][hintIndex];
+                    }
+                    td.id = `col-hint-${j}-${i}`;
+                }
+            }
+
+            // ゲームグリッドと行ヒントを表示
+            for (let i = 0; i < puzzle.size; i++) {
+                const tr = table.insertRow();
+                
+                // 行ヒント
+                for (let j = 0; j < maxRowHints; j++) {
+                    const td = tr.insertCell();
+                    td.className = 'hint';
+                    const hintIndex = j - (maxRowHints - rowHints[i].length);
+                    if (hintIndex >= 0) {
+                        td.textContent = rowHints[i][hintIndex];
+                    }
+                    td.id = `row-hint-${i}-${j}`;
+                }
+                
+                // ゲームセル
+                for (let j = 0; j < puzzle.size; j++) {
+                    const td = tr.insertCell();
+                    td.className = 'cell';
+                    if (j % 5 === 4 && j < puzzle.size - 1) {
+                        td.classList.add('thick-border-right');
+                    }
+                    if (i % 5 === 4 && i < puzzle.size - 1) {
+                        td.classList.add('thick-border-bottom');
+                    }
+                    td.dataset.row = i;
+                    td.dataset.col = j;
+                    td.addEventListener('click', handleCellClick);
+                    td.addEventListener('contextmenu', handleRightClick);
+                }
+            }
+
+            board.appendChild(table);
+        }
+
+        function handleCellClick(e) {
+            const row = parseInt(e.target.dataset.row);
+            const col = parseInt(e.target.dataset.col);
+            
+            if (isMarkMode) {
+                // マークモード
+                if (playerGrid[row][col] === 0) {
+                    playerGrid[row][col] = -1;
+                    e.target.classList.add('marked');
+                    e.target.classList.remove('filled');
+                } else if (playerGrid[row][col] === -1) {
+                    playerGrid[row][col] = 0;
+                    e.target.classList.remove('marked');
+                } else if (playerGrid[row][col] === 1) {
+                    playerGrid[row][col] = -1;
+                    e.target.classList.remove('filled');
+                    e.target.classList.add('marked');
+                }
+            } else {
+                // 塗りつぶしモード
+                if (playerGrid[row][col] === 0 || playerGrid[row][col] === -1) {
+                    playerGrid[row][col] = 1;
+                    e.target.classList.add('filled');
+                    e.target.classList.remove('marked');
+                    
+                    // 間違いチェック
+                    if (puzzles[currentPuzzle].solution[row][col] === 0) {
+                        mistakes++;
+                        document.getElementById('mistakes').textContent = mistakes;
+                        e.target.style.animation = 'none';
+                        setTimeout(() => {
+                            e.target.style.animation = '';
+                        }, 10);
+                    }
+                } else {
+                    playerGrid[row][col] = 0;
+                    e.target.classList.remove('filled');
+                }
+            }
+            
+            updateHints();
+            checkWin();
+        }
+
+        function handleRightClick(e) {
+            e.preventDefault();
+            const row = parseInt(e.target.dataset.row);
+            const col = parseInt(e.target.dataset.col);
+            
+            if (playerGrid[row][col] === 0) {
+                playerGrid[row][col] = -1;
+                e.target.classList.add('marked');
+                e.target.classList.remove('filled');
+            } else if (playerGrid[row][col] === -1) {
+                playerGrid[row][col] = 0;
+                e.target.classList.remove('marked');
+            } else if (playerGrid[row][col] === 1) {
+                playerGrid[row][col] = -1;
+                e.target.classList.remove('filled');
+                e.target.classList.add('marked');
+            }
+            
+            updateHints();
+        }
+
+        function updateHints() {
+            const puzzle = puzzles[currentPuzzle];
+            
+            // 行ヒントの更新
+            for (let i = 0; i < puzzle.size; i++) {
+                const hints = [];
+                let count = 0;
+                for (let j = 0; j < puzzle.size; j++) {
+                    if (playerGrid[i][j] === 1) {
+                        count++;
+                    } else if (count > 0) {
+                        hints.push(count);
+                        count = 0;
+                    }
+                }
+                if (count > 0) hints.push(count);
+                
+                // 正解と比較
+                const correctHints = [];
+                count = 0;
+                for (let j = 0; j < puzzle.size; j++) {
+                    if (puzzle.solution[i][j] === 1) {
+                        count++;
+                    } else if (count > 0) {
+                        correctHints.push(count);
+                        count = 0;
+                    }
+                }
+                if (count > 0) correctHints.push(count);
+                
+                const isComplete = JSON.stringify(hints) === JSON.stringify(correctHints);
+                
+                // ヒントセルの更新
+                const hintCells = document.querySelectorAll(`[id^="row-hint-${i}-"]`);
+                hintCells.forEach(cell => {
+                    if (isComplete) {
+                        cell.classList.add('completed');
+                    } else {
+                        cell.classList.remove('completed');
+                    }
+                });
+            }
+            
+            // 列ヒントの更新
+            for (let j = 0; j < puzzle.size; j++) {
+                const hints = [];
+                let count = 0;
+                for (let i = 0; i < puzzle.size; i++) {
+                    if (playerGrid[i][j] === 1) {
+                        count++;
+                    } else if (count > 0) {
+                        hints.push(count);
+                        count = 0;
+                    }
+                }
+                if (count > 0) hints.push(count);
+                
+                // 正解と比較
+                const correctHints = [];
+                count = 0;
+                for (let i = 0; i < puzzle.size; i++) {
+                    if (puzzle.solution[i][j] === 1) {
+                        count++;
+                    } else if (count > 0) {
+                        correctHints.push(count);
+                        count = 0;
+                    }
+                }
+                if (count > 0) correctHints.push(count);
+                
+                const isComplete = JSON.stringify(hints) === JSON.stringify(correctHints);
+                
+                // ヒントセルの更新
+                const hintCells = document.querySelectorAll(`[id^="col-hint-${j}-"]`);
+                hintCells.forEach(cell => {
+                    if (isComplete) {
+                        cell.classList.add('completed');
+                    } else {
+                        cell.classList.remove('completed');
+                    }
+                });
+            }
+        }
+
+        function toggleMode() {
+            isMarkMode = !isMarkMode;
+            const indicator = document.getElementById('modeIndicator');
+            if (isMarkMode) {
+                indicator.textContent = 'モード: ×マーク (左クリック)';
+                indicator.className = 'mode-indicator mark';
+            } else {
+                indicator.textContent = 'モード: 塗りつぶし (左クリック)';
+                indicator.className = 'mode-indicator fill';
+            }
+        }
+
+        function resetPuzzle() {
+            initGame();
+        }
+
+        function checkSolution() {
+            const puzzle = puzzles[currentPuzzle];
+            let isCorrect = true;
+            
+            for (let i = 0; i < puzzle.size; i++) {
+                for (let j = 0; j < puzzle.size; j++) {
+                    const cell = document.querySelector(`[data-row="${i}"][data-col="${j}"]`);
+                    if (puzzle.solution[i][j] === 1 && playerGrid[i][j] !== 1) {
+                        isCorrect = false;
+                        cell.style.backgroundColor = '#ffcccc';
+                        setTimeout(() => {
+                            cell.style.backgroundColor = '';
+                        }, 1000);
+                    } else if (puzzle.solution[i][j] === 0 && playerGrid[i][j] === 1) {
+                        isCorrect = false;
+                        cell.style.backgroundColor = '#ffcccc';
+                        setTimeout(() => {
+                            cell.style.backgroundColor = '';
+                        }, 1000);
+                    }
+                }
+            }
+            
+            if (isCorrect) {
+                showWinMessage();
+            }
+        }
+
+        function checkWin() {
+            const puzzle = puzzles[currentPuzzle];
+            for (let i = 0; i < puzzle.size; i++) {
+                for (let j = 0; j < puzzle.size; j++) {
+                    if (puzzle.solution[i][j] === 1 && playerGrid[i][j] !== 1) {
+                        return false;
+                    }
+                    if (puzzle.solution[i][j] === 0 && playerGrid[i][j] === 1) {
+                        return false;
+                    }
+                }
+            }
+            showWinMessage();
+            return true;
+        }
+
+        function showWinMessage() {
+            stopTimer();
+            const overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            
+            const message = document.createElement('div');
+            message.className = 'win-message';
+            message.innerHTML = `
+                <h2>🎉 クリア！ 🎉</h2>
+                <p>おめでとうございます！</p>
+                <p>タイム: ${document.getElementById('timer').textContent}</p>
+                <p>ミス: ${mistakes}回</p>
+                <button class="btn-primary" onclick="closeWinMessage()">OK</button>
+            `;
+            
+            document.body.appendChild(overlay);
+            document.body.appendChild(message);
+        }
+
+        function closeWinMessage() {
+            const overlay = document.querySelector('.overlay');
+            const message = document.querySelector('.win-message');
+            if (overlay) overlay.remove();
+            if (message) message.remove();
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timer++;
+                const minutes = Math.floor(timer / 60);
+                const seconds = timer % 60;
+                document.getElementById('timer').textContent = 
+                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+        }
+
+        function resetTimer() {
+            stopTimer();
+            timer = 0;
+            document.getElementById('timer').textContent = '00:00';
+        }
+
+        // キーボードショートカット
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'x' || e.key === 'X') {
+                toggleMode();
+            }
+        });
+
+        // パズル選択
+        document.getElementById('puzzleSelect').addEventListener('change', (e) => {
+            currentPuzzle = parseInt(e.target.value);
+            initGame();
+        });
+
+        // ゲーム開始
+        initGame();
+    </script>
+</body>
+</html>
