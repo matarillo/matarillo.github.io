@@ -29,3 +29,7 @@ disableKinds = ["taxonomy", "term"]
       name = "F# for Fun and Profit eBook"
       url = "/fsharp_for_fun_and_profit-ja/"
       weight = 5
+  [[menu.main]]
+      name = "イラストロジック"
+      url = "/nonogram/"
+      weight = 6
