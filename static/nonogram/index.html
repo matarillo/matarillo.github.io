@@ -279,10 +279,6 @@
         
         <div class="puzzle-selector">
             <select id="puzzleSelect">
-                <option value="0">パズル1: ハート (5×5)</option>
-                <option value="1">パズル2: 家 (10×10)</option>
-                <option value="2">パズル3: スマイル (10×10)</option>
-                <option value="3">パズル4: あさがお (15×15)</option>
             </select>
         </div>
 
@@ -379,6 +375,17 @@
         let timer = 0;
         let timerInterval = null;
         let mistakes = 0;
+
+        function initSelector() {
+            const options = puzzles.map((x, i) => {
+                const o = document.createElement("option");
+                o.value = i.toString();
+                o.textContent = `パズル${i + 1}: ${x.name} (${x.size}×${x.size})`;
+                return o;
+            });
+            const puzzleSelect = document.getElementById('puzzleSelect');
+            puzzleSelect.replaceChildren(...options);
+        }
 
         function initGame() {
             const puzzle = puzzles[currentPuzzle];
@@ -764,6 +771,8 @@
             initGame();
         });
 
+        // パズルの選択肢を準備
+        initSelector();
         // ゲーム開始
         initGame();
     </script>
