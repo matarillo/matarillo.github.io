@@ -1,37 +1,82 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="ja">
 <head>
+<meta charset="UTF-8">
+<!-- ビューポートとノッチ（セーフエリア）対策 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <style>
-body {
-  word-wrap:break-word;
-  text-align: justify;
-  text-spacing-trim: space-all;
-  writing-mode:vertical-rl;
-}
-p {
-  font-size: 20.0pt;
-  line-height: 107%;
-  font-family: "BIZ UDP明朝 Medium", serif;
-}
-ruby {
-  ruby-align: distribute-space;
-  ruby-position: over;
-}
-rt {
-  font-size:50%;
-}
-</style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
+  html, body {
+    width: 100%;
+    /* モバイルSafariのツールバー変形に対応した画面全体の高さ指定 */
+    height: 100dvh; 
+    overflow: hidden; /* スクロールを完全に防止 */
+    background-color: #fff;
+  }
+
+  body {
+    word-break: break-all;
+    text-align: justify;
+    text-spacing-trim: space-all;
+    writing-mode: vertical-rl;
+    
+    /* iPhoneのノッチやホームバー（セーフエリア）を考慮した余白 */
+    padding-top: env(safe-area-inset-top, 16px);
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+    padding-left: env(safe-area-inset-left, 16px);
+    padding-right: env(safe-area-inset-right, 16px);
+
+    /* 画面中央に配置 */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .content-box {
+    /* 縦書き時の領域を最大化 */
+    height: 80%;
+    max-height: 80%;
+    
+    /* 
+      文字サイズの動的計算 (clamp)
+      ・最小値: 14px
+      ・推奨値: 3.8vw (画面幅に応じて可変)
+      ・最大値: 2.8vh (縦の高さから溢れない上限)
+    */
+    font-size: clamp(14px, 5.8vw, 2.8vh);
+    line-height: 1.8;
+    font-family: "BIZ UDP明朝 Medium", "Hiragino Mincho ProN", serif;
+  }
+
+  p {
+    /* 段落ごとの改行間隔 */
+    margin-left: 0.6em; 
+  }
+
+  ruby {
+    ruby-align: distribute-space;
+    ruby-position: over;
+  }
+
+  rt {
+    font-size: 50%;
+  }
+</style>
 </head>
 
-<body lang="ja">
+<body>
 
-<div>
-<p><ruby>上来<rp>(</rp><rt>じょうらい</rt><rp>)</rp></ruby>、般若心経を<ruby>諷誦<rp>(</rp><rt>ふじゅ</rt><rp>)</rp></ruby>する功徳は、大恩教主 釈迦牟尼仏、高祖 仏性<ruby>伝灯<rp>(</rp><rt>でんどう</rt><rp>)</rp></ruby>国師 <ruby>承陽<rp>(</rp><rt>じょうよう</rt><rp>)</rp></ruby>大師、太祖 弘徳<ruby>円明<rp>(</rp><rt>えんみょう</rt><rp>)</rp></ruby>国師 <ruby>常済<rp>(</rp><rt>じょうさい</rt><rp>)</rp></ruby>大師、尽十方法界 一切の三宝に回向す。</p>
-<p>伏して願わくは、四恩総て報じ、<ruby>三有<rp>(</rp><rt>さんう</rt><rp>)</rp></ruby><ruby>斉<rp>(</rp><rt>ひとし</rt><rp>)</rp></ruby>く<ruby>資<rp>(</rp><rt>たす</rt><rp>)</rp></ruby>け、法界の有情と、同じく種智を円かにせんことを。</p>
-<p><ruby>冀<rp>(</rp><rt>こいねが</rt><rp>)</rp></ruby>う所は、家門繁栄、子孫長久、<ruby>災障<rp>(</rp><rt>さいしょう</rt><rp>)</rp></ruby><ruby>消除<rp>(</rp><rt>しょうじょ</rt><rp>)</rp></ruby>、諸縁<ruby>吉祥<rp>(</rp><rt>きちじょう</rt><rp>)</rp></ruby>ならんことを。</p>
-<p>【略三宝】</p>
-<p><ruby>十方<rp>(</rp><rt>じーほー</rt><rp>)</rp></ruby><ruby>三世<rp>(</rp><rt>さんしー</rt><rp>)</rp></ruby><ruby>一切<rp>(</rp><rt>いーしー</rt><rp>)</rp></ruby><ruby>仏<rp>(</rp><rt>ふー</rt><rp>)</rp></ruby>。<ruby>諸尊<rp>(</rp><rt>しーそん</rt><rp>)</rp></ruby><ruby>菩薩<rp>(</rp><rt>ぶーさー</rt><rp>)</rp></ruby><ruby>摩訶<rp>(</rp><rt>もーこー</rt><rp>)</rp></ruby><ruby>薩<rp>(</rp><rt>さー</rt><rp>)</rp></ruby>。<ruby>摩訶<rp>(</rp><rt>もーこー</rt><rp>)</rp></ruby><ruby>般若<rp>(</rp><rt>ほーじゃ</rt><rp>)</rp></ruby><ruby>波羅蜜<rp>(</rp><rt>ほーろーみー</rt><rp>)</rp></ruby>。</p>
+<div class="content-box">
+  <p><ruby>上来<rp>(</rp><rt>じょうらい</rt><rp>)</rp></ruby>、般若心経を<ruby>諷誦<rp>(</rp><rt>ふじゅ</rt><rp>)</rp></ruby>する功徳は、大恩教主 釈迦牟尼仏、高祖 仏性<ruby>伝灯<rp>(</rp><rt>でんどう</rt><rp>)</rp></ruby>国師 <ruby>承陽<rp>(</rp><rt>じょうよう</rt><rp>)</rp></ruby>大師、太祖 弘徳<ruby>円明<rp>(</rp><rt>えんみょう</rt><rp>)</rp></ruby>国師 <ruby>常済<rp>(</rp><rt>じょうさい</rt><rp>)</rp></ruby>大師、尽十方法界 一切の三宝に回向す。</p>
+  <p>伏して願わくは、四恩総て報じ、<ruby>三有<rp>(</rp><rt>さんう</rt><rp>)</rp></ruby><ruby>斉<rp>(</rp><rt>ひとし</rt><rp>)</rp></ruby>く<ruby>資<rp>(</rp><rt>たす</rt><rp>)</rp></ruby>け、法界の有情と、同じく種智を円かにせんことを。</p>
+  <p><ruby>冀<rp>(</rp><rt>こいねが</rt><rp>)</rp></ruby>う所は、家門繁栄、子孫長久、<ruby>災障<rp>(</rp><rt>さいしょう</rt><rp>)</rp></ruby><ruby>消除<rp>(</rp><rt>しょうじょ</rt><rp>)</rp></ruby>、諸縁<ruby>吉祥<rp>(</rp><rt>きちじょう</rt><rp>)</rp></ruby>ならんことを。</p>
+  <p>【略三宝】</p>
+  <p><ruby>十方<rp>(</rp><rt>じーほー</rt><rp>)</rp></ruby><ruby>三世<rp>(</rp><rt>さんしー</rt><rp>)</rp></ruby><ruby>一切<rp>(</rp><rt>いーしー</rt><rp>)</rp></ruby><ruby>仏<rp>(</rp><rt>ふー</rt><rp>)</rp></ruby>。<ruby>諸尊<rp>(</rp><rt>しーそん</rt><rp>)</rp></ruby><ruby>菩薩<rp>(</rp><rt>ぶーさー</rt><rp>)</rp></ruby><ruby>摩訶<rp>(</rp><rt>もーこー</rt><rp>)</rp></ruby><ruby>薩<rp>(</rp><rt>さー</rt><rp>)</rp></ruby>。<ruby>摩訶<rp>(</rp><rt>もーこー</rt><rp>)</rp></ruby><ruby>般若<rp>(</rp><rt>ほーじゃ</rt><rp>)</rp></ruby><ruby>波羅蜜<rp>(</rp><rt>ほーろーみー</rt><rp>)</rp></ruby>。</p>
 </div>
 
 </body>

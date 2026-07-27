@@ -33,3 +33,7 @@ disableKinds = ["taxonomy", "term"]
       name = "イラストロジック"
       url = "/nonogram/"
       weight = 6
+  [[menu.main]]
+      name = "おつとめ"
+      url = "/chant/"
+      weight = 7
