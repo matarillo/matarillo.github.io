@@ -4,13 +4,16 @@ MELODY:
 @1 C D E F G A B >C
 
 BASS:
-@3 O2 L2 C G A F
+@3 O2 L8 CCR_G CCR_G FFRC FFRC
 
 PAD:
 @6 O3 L1 (CEG) (CFA)
 `;document.querySelector(`#app`).innerHTML=`
   <div>
-    <h1>Small MML Player</h1>
+    <h1 class="app-title">Small MML Player</h1>
+    <p class="project-links">
+      <a href="https://github.com/matarillo/mmlplayer/" target="_blank" rel="noopener noreferrer">matarillo/mmlplayer on GitHub</a>
+    </p>
     <div class="card">
       <div class="mml-editor">
         <div class="mml-editor-header">
